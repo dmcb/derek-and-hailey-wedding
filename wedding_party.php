@@ -14,7 +14,7 @@
   	<div class="page">
   		<div class="wrapper">
   			<div class="section" id="our_family">
-				<h3><a name="our_family"><img src="images/our_family.png" alt="Our Family" /></a></h3>
+				<h3><a id="our_family"><img src="images/our_family.png" alt="Our Family" /></a></h3>
 				<h4>The Pintos</h4>
 				<p></p>
 				<h4>The McBurneys</h4>
@@ -22,7 +22,7 @@
 			</div>
 			<div class="divider"><span class="highlight">&bull;</span>&bull;</div>
 			<div class="section" id="the_girls">
-				<h3><a name="the_girls"><img src="images/the_girls.png" alt="The Girls" /></a></h3>
+				<h3><a id="the_girls"><img src="images/the_girls.png" alt="The Girls" /></a></h3>
 				<span class="bold">Glyn Gracias</span>
 				<p>
 					Glyn Gracias has been my best friend since before we were born. When we got engaged, besides our families, she was the first person I called, and without hesitation, she gracias-ly (see what I did there) agreed to be my maid of honour. This summer, my smarty-pants friend will be moving to Vancouver this to go through the MBA program at the University of British Colombia.<br/>
@@ -46,7 +46,7 @@
 			</div>
 			<div class="divider">&bull;<span class="highlight">&bull;</span></div>
 			<div class="section" id="the_boys">
-				<h3><a name="the_boys"><img src="images/the_boys.png" alt="The Boys" /></a></h3>
+				<h3><a id="the_boys"><img src="images/the_boys.png" alt="The Boys" /></a></h3>
 				<span class="bold">Cam McBurney</span>
 				<p></p>
 				<span class="bold">Serge Basso</span>
