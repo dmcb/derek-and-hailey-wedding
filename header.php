@@ -1,5 +1,11 @@
 <!doctype html>
   <head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="description" content="Derek and Hailey start their biggest adventure." />
+	<meta name="keywords" content="derek mcburney, hailey pinto, wedding, calgary, alberta, dmcb design" />
+	<meta name="robots" content="ALL" />
+	<meta name="author" content="Derek McBurney" />
+
     <title>The Wedding | Derek &amp; Hailey</title>
 
     <style type="text/css">@import "styles/style.css";</style>
