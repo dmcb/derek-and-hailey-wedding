@@ -17,6 +17,7 @@
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
     <script src="scripts/jquery.timers-1.1.2.js"></script>
     <script src="scripts/jquery.scrollorama.js"></script>
+<<<<<<< HEAD
 
 	<!-- Heart effect -->
 	<script type="text/javascript">
@@ -48,6 +49,9 @@
 			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
 		})();
 	</script>
+=======
+    <script src="scripts/script.js"></script>
+>>>>>>> Wedding party mad libs added.
   </head>
 
   <body class="scrollblock">

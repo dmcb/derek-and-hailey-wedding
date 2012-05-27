@@ -27,13 +27,9 @@ a {
 	color: $pink-dark;
 	text-decoration: none;
 
-	img {
-		border-style: none;
+	&:hover {
+		text-decoration: underline;
 	}
-}
-
-a:hover {
-	text-decoration: underline;
 }
 
 p {
@@ -244,6 +240,98 @@ div.page {
 
 		span.highlight {
 			color: $beige-dark;
+		}
+	}
+
+	div.wedding_party {
+		width: 368px;
+		height: 1039px;
+		float: left;
+
+		h4 {
+			margin-top: 8px;
+		}
+
+		div.divider {
+			clear: both;
+			padding-top: 33px;
+		}
+
+		a.person {
+			position: relative;
+			margin-bottom: -8px;
+			text-decoration: none;
+			float: left;
+			width: 368px;
+
+			img {
+				width: 160px;
+				height: 102px;
+				vertical-align: middle;
+			}
+
+			span {
+				margin-left: 16px;
+				color: $chocolate;
+			}
+
+			&:hover, &.selected {
+				z-index: 1;
+
+				span {
+					color: $pink-dark;
+				}
+
+				img {
+					@include border($pink-dark);
+				}
+			}
+		}
+	}
+
+	div.mad_lib {
+		background-image: url(../images/mad_lib.png);
+		width: 590px;
+		height: 1039px;
+		position: absolute;
+		right: 0;
+
+		div.overlay {
+			position: absolute;
+			background-repeat: no-repeat;
+			background-position: 36px 54px;
+			width: 590px;
+			height: 1039px;
+			display: none;
+
+			&#bonnie_overlay {
+				background-image: url(../images/mad_lib_bonnie.png);
+			}
+			&#lorraine_overlay {
+				background-image: url(../images/mad_lib_lorraine.png);
+			}
+			&#lori_overlay {
+				background-image: url(../images/mad_lib_lori.png);
+			}
+			&#glyn_overlay {
+				background-image: url(../images/mad_lib_glyn.png);
+			}
+			&#cam_overlay {
+				background-image: url(../images/mad_lib_cam.png);
+			}
+			&#serge_overlay {
+				background-image: url(../images/mad_lib_serge.png);
+			}
+			&#kyle_overlay {
+				background-image: url(../images/mad_lib_kyle.png);
+			}
+			&#jason_overlay {
+				background-image: url(../images/mad_lib_jason.png);
+			}
+
+			&.selected {
+				display: inline;
+			}
 		}
 	}
 
