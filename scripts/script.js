@@ -1,4 +1,5 @@
 $(document).ready(function(){
+	// Twitter heart effect
 	$("#tweets").hover(
 	function(){
 		if (!$("#heart").is(":animated")) {
@@ -12,6 +13,7 @@ $(document).ready(function(){
 		$("#heart").clearQueue();
 	});
 
+	// Wedding party mad lib selection
 	$('.person').click(function() {
 		var selected = false;
 		if ($(this).hasClass('selected')) {
@@ -25,5 +27,52 @@ $(document).ready(function(){
 			$('.overlay#' + id + '_overlay').addClass('selected');
 		}
 	});
+
+
+	// Flying bird effects
+	var scrollorama = $.scrollorama({
+		blocks:'.scrollblock'
+	});
+
+	if ($('#bird1').length != 0) {
+		scrollorama.animate('#bird1',
+		{
+			delay:50,
+			duration:1200,
+			property:'background-position-x',
+			start:-129,
+			end:$(window).width()
+		});
+		scrollorama.animate('#bird1',
+		{
+			delay:640,
+			duration:500,
+			property:'background-position-y',
+			start:0,
+			end:240,
+			easing:'easeInOutQuad'
+		});
+	}
+
+	if ($('#bird2').length != 0) {
+		scrollorama.animate('#bird2',
+		{
+			delay:150,
+			duration:700,
+			property:'background-position-x',
+			start:$(window).width(),
+			end:$(window).width()/2+200,
+			easing:'easeOutSine'
+		});
+		scrollorama.animate('#bird2',
+		{
+			delay:150,
+			duration:700,
+			property:'background-position-y',
+			start:300,
+			end:40,
+			easing:'easeInOutBack'
+		});
+	}
 });
 

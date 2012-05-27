@@ -31,9 +31,17 @@ div.background {
   height: 100%; }
 
 div.bird {
-  height: 400px;
+  position: absolute;
   width: 100%;
-  position: absolute; }
+  height: 500px; }
+  div.bird#bird1 {
+    background: url(../images/bird_flight.png) no-repeat 204px 56px;
+    top: 840px;
+    left: 0; }
+  div.bird#bird2 {
+    background: url(../images/bird_flight_2.png) no-repeat 0px 0px;
+    top: 960px;
+    left: 0; }
 
 div.bird#bird1 {
   background: url(../images/bird_flight.png) no-repeat 204px 56px;
@@ -155,6 +163,8 @@ div.page {
   div.page div.divider + div.section {
     margin-top: 32px; }
   div.page div.divider {
+    position: relative;
+    z-index: -1;
     color: #f0e7d8;
     text-align: center;
     font-size: 1.29em; }
@@ -193,7 +203,8 @@ div.page {
     width: 590px;
     height: 1039px;
     position: absolute;
-    right: 0; }
+    right: 0;
+    z-index: -1; }
     div.page div.mad_lib div.overlay {
       position: absolute;
       background-repeat: no-repeat;

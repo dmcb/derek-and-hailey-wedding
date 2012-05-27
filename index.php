@@ -1,33 +1,5 @@
 <?php include 'header.php';?>
 
-	<!-- Birds flying effect -->
-    <script>
-		$(document).ready(function() {
-			var scrollorama = $.scrollorama({
-				blocks:'.scrollblock'
-			});
-
-			scrollorama.animate('#bird1',
-			{
-				delay:50,
-				duration:1200,
-				property:'background-position-x',
-				start:-129,
-				end:$(window).width()
-			});
-
-			scrollorama.animate('#bird1',
-			{
-				delay:640,
-				duration:500,
-				property:'background-position-y',
-				start:0,
-				end:240,
-				easing:'easeInOutQuad'
-			});
-		});
-    </script>
-
 	<div class="bird" id="bird1"></div>
 
   	<div class="navigation">
@@ -55,7 +27,7 @@
 			<div class="divider">&bull;<span class="highlight">&bull;</span></div>
 			<div class="section">
 				<h3><a id="about_calgary"><img src="images/about_calgary.png" alt="About Calgary" /></a></h3>
-				<p>We live in <a href="http://en.wikipedia.org/wiki/Calgary">Calgary, Alberta</a> and we could think of no better place to bring our family and friends to for our wedding than our home. Some of you will already know what Calgary is like in February but for those of you that don't, we will break the news: it's cold. But the Canadian winter, as chilly as it may be, is beautiful, so please remember: there is no bad weather, only bad clothes!</p>
+				<p>We live in <a href="http://en.wikipedia.org/wiki/Calgary">Calgary, Alberta</a> and we couldn't think of a better place to bring our family and friends for our wedding than our home. Some of you will already know what Calgary is like in February but for those of you that don't, we will break the news: it's cold. But the Canadian winter, as chilly as it may be, is beautiful, so please remember: there is no bad weather, only bad clothes!</p>
 				<p>We've recommended our favourite things to eat, see and do in and around Calgary in February. Have a wonderful time!</p>
 
 				<div class="triple left">

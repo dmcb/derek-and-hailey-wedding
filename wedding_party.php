@@ -1,5 +1,7 @@
 <?php include 'header.php';?>
 
+	<div class="bird" id="bird2"></div>
+
   	<div class="navigation">
   		<div class="wrapper">
   			<div class="box">
