@@ -29,7 +29,7 @@
 
 				<div class="double right">
 					<h4>The Pintos</h4>
-					<p>Family members: My dad, Vivian; my mom, Ophelia; my older brother, Huxley, his daughter Lizzy, his wife Joy (plus baby to be expecting to make his or her grand debut this September); my younger brother, Hadley</p>
+					<p>Family members: My dad, Vivian; my mom, Ophelia; my older brother, Huxley; his daughter Lizzy; his wife Joy (plus baby to be expecting to make his or her grand debut this September); and my younger brother, Hadley</p>
 					<p>Places lived: Dubai, Toronto, Calgary</p>
 					<p>Familial traits: Inside-joke tellers, TV quoters, stand-in-a-line-and-balance-a-shelf-on-our-head’ers (we’re all pretty much the exact same height, so Derek really stands out in family pictures), temper losers, horrible singers, and sarcastic jokers.</p>
 
@@ -37,7 +37,7 @@
 					<br/>
 
 					<h4>The McBurneys</h4>
-					<p>Family members: My dad, Jim; my mom, Joyce; my older brother, Cam</p>
+					<p>Family members: My dad, Jim; my mom, Joyce; and my older brother, Cam</p>
 					<p>Places lived: Sarnia, Calgary</p>
 					<p>Familial traits: Blue-Jay lovers, manual-shift car drivers, red-card receivers, urban dwellers, computer-game players, and fashion-forward thinkers</p>
 				</div>
