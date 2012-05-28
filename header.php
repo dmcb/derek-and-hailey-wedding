@@ -41,21 +41,24 @@
   		<div class="wrapper">
 			<a href="./"><img src="images/derek_and_hailey.png" alt="Derek &amp; Hailey"/></a>
 
+			<?php
+				$uri_segments = explode("/", $_SERVER['REQUEST_URI']);
+			?>
+
 			<ul class="menu"><li>
-					<a href="./" class="selected">
-						<span class="title">The Wedding</span>
+					<a href="./" <?php if ($uri_segments[sizeof($uri_segments)-1] == "") echo 'class="selected"';?>>
+						<span class="title" >The Wedding</span>
 						<span class="description">Details on the start of our biggest adventure</span>
 					</a>
 				</li>
 				<li>
-					<a>
+					<a href="wedding_party" <?php if ($uri_segments[sizeof($uri_segments)-1] == "wedding_party") echo 'class="selected"';?>>
 						<span class="title">The Wedding Party</span>
-						<!--<span class="description">Meet the cast that brought us here</span>-->
-						<span class="description">Coming soon...</span>
+						<span class="description">Meet the cast that brought us here</span>
 					</a>
 				</li>
 				<li>
-					<a>
+					<a <?php if ($uri_segments[sizeof($uri_segments)-1] == "photos") echo 'class="selected"';?>>
 						<span class="title">Photos + Blog</span>
 						<!--<span class="description">See our story and help us tell it</span>-->
 						<span class="description">Coming soon...</span>

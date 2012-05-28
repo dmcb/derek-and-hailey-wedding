@@ -14,7 +14,7 @@
 				</a>
 
 				<div class="menu">
-					<a href="./">the wedding</a> &bull; <a>the wedding party</a> &bull; <a>photos + blog</a>
+					<a href="./">the wedding</a> &bull; <a href="wedding_party">the wedding party</a> &bull; <a>photos + blog</a>
 					<a class="watermark" href="http://dmcbdesign.com"><img src="images/watermark.png" alt="Made with love by dmcb design" /></a>
 				</div>
 			</div>

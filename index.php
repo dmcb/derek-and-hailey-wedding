@@ -15,25 +15,25 @@
 
   	<div class="page">
   		<div class="wrapper">
-  			<div class="section">
-				<h3><a id="itinerary"><img src="images/itinerary.png" alt="Itinerary" /></a></h3>
+  			<div class="section" id="itinerary">
+				<h3><img src="images/itinerary.png" alt="Itinerary" /></h3>
 				<p>The wedding ceremony and reception will be held on Sunday, February 17th, 2013. All other details will be announced soon.</p>
 			</div>
 			<div class="divider"><span class="highlight">&bull;</span>&bull;</div>
-			<div class="section">
-				<h3><a id="rsvp"><img src="images/rsvp.png" alt="RSVP" /></a><!-- + <a id="registry"><img src="images/registry.png" alt="Registry" /></a>--> + <a id="where_to_stay"><img src="images/where_to_stay.png" alt="Where To Stay" /></a></h3>
+			<div class="section" id="rsvp">
+				<h3><img src="images/rsvp.png" alt="RSVP" /><!-- + <a id="registry"><img src="images/registry.png" alt="Registry" /></a>--> + <a id="where_to_stay"><img src="images/where_to_stay.png" alt="Where To Stay" /></a></h3>
 				<p>To be announced.</p>
 			</div>
 			<div class="divider">&bull;<span class="highlight">&bull;</span></div>
-			<div class="section">
-				<h3><a id="about_calgary"><img src="images/about_calgary.png" alt="About Calgary" /></a></h3>
+			<div class="section" id="about_calgary">
+				<h3><img src="images/about_calgary.png" alt="About Calgary" /></h3>
 				<p>We live in <a href="http://en.wikipedia.org/wiki/Calgary">Calgary, Alberta</a> and we couldn't think of a better place to bring our family and friends for our wedding than our home. Some of you will already know what Calgary is like in February but for those of you that don't, we will break the news: it's cold. But the Canadian winter, as chilly as it may be, is beautiful, so please remember: there is no bad weather, only bad clothes!</p>
 				<p>We've recommended our favourite things to eat, see and do in and around Calgary in February. Have a wonderful time!</p>
 
 				<div class="triple left">
-					<img src="images/calgary.png" alt="" class="left one rotate" id="calgary1" />
-					<img src="images/calgary_peace_bridge.png" alt="" class="left rotate" id="calgary2" />
-					<img src="images/calgary_aurora.png" alt="" class="left rotate" id="calgary3" />
+					<img src="images/calgary.png" style="left: 192px;" alt="" class="rotate" id="calgary1" />
+					<img src="images/calgary_peace_bridge.png" style="top: 184px;" alt="" class="rotate" id="calgary2" />
+					<img src="images/calgary_aurora.png" style="top: 312px; left: 104px;" alt="" class="rotate" id="calgary3" />
 				</div>
 
 				<div class="double right">

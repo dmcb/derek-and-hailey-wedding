@@ -16,11 +16,31 @@
   	<div class="page">
   		<div class="wrapper">
   			<div class="section" id="our_family">
-				<h3><a id="our_family"><img src="images/our_family.png" alt="Our Family" /></a></h3>
-				<h4>The Pintos</h4>
-				<p></p>
-				<h4>The McBurneys</h4>
-				<p></p>
+				<h3><img src="images/our_family.png" alt="Our Family" /></h3>
+
+				<div class="triple left">
+					<img src="images/pintos_2.png" style="width: 304px; height: 228px; top: 247px; left: 40px;" alt="" class="scale" id="pintos2" />
+					<img src="images/pintos_3.png" style="width: 198px; height: 168px; top: 36px;" alt="" class="scale" id="pintos3" />
+					<img src="images/pintos_1.png" style="width: 392px; height: 278px; left: 153px;" alt="" class="scale" id="pintos1" />
+					<img src="images/mcburneys_3.png" style="width: 145px; height: 193px; top: 286px; left: 368px;" alt="" class="scale" id="mcburneys3" />
+					<img src="images/mcburneys_1.png" style="width: 317px; height: 224px; top: 511px;" alt="" class="scale" id="mcburneys1" />
+					<img src="images/mcburneys_2.png" style="width: 253px; height: 342px; top: 443px; left: 291px;" alt="" class="scale" id="mcburneys2" />
+				</div>
+
+				<div class="double right">
+					<h4>The Pintos</h4>
+					<p>Family members: My dad, Vivian; my mom, Ophelia; my older brother, Huxley, his daughter Lizzy, his wife Joy (plus baby to be expecting to make his or her grand debut this September); my younger brother, Hadley</p>
+					<p>Places lived: Dubai, Toronto, Calgary</p>
+					<p>Familial traits: Inside-joke tellers, TV quoters, stand-in-a-line-and-balance-a-shelf-on-our-head’ers (we’re all pretty much the exact same height, so Derek really stands out in family pictures), temper losers, horrible singers, and sarcastic jokers.</p>
+
+					<br/>
+					<br/>
+
+					<h4>The McBurneys</h4>
+					<p>Family members: My dad, Jim; my mom, Joyce; my older brother, Cam</p>
+					<p>Places lived: Sarnia, Calgary</p>
+					<p>Familial traits: Blue-Jay lovers, manual-shift car drivers, red-card receivers, urban dwellers, computer-game players, and fashion-forward thinkers</p>
+				</div>
 			</div>
 			<div class="divider"><span class="highlight">&bull;</span></div>
 			<div class="section">

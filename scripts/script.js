@@ -57,8 +57,8 @@ $(document).ready(function(){
 	if ($('#bird2').length != 0) {
 		scrollorama.animate('#bird2',
 		{
-			delay:150,
-			duration:700,
+			delay:970,
+			duration:650,
 			property:'background-position-x',
 			start:$(window).width(),
 			end:$(window).width()/2+200,
@@ -66,8 +66,8 @@ $(document).ready(function(){
 		});
 		scrollorama.animate('#bird2',
 		{
-			delay:150,
-			duration:700,
+			delay:970,
+			duration:650,
 			property:'background-position-y',
 			start:300,
 			end:40,
