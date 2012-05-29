@@ -180,6 +180,7 @@ div.page {
       clear: both;
       padding-top: 33px; }
     div.page div.wedding_party a.person {
+      cursor: pointer;
       position: relative;
       margin-bottom: -8px;
       text-decoration: none;
