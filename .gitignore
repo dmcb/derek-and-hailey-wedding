@@ -1,5 +1,7 @@
 # Ignore OS X and SASS garbage
-
 .DS_Store*
 Thumbs.db
 .sass-cache
+
+# Ignore system-specific .htaccess
+.htaccess

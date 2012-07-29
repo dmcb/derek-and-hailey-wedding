@@ -1,75 +1,205 @@
-<?php include 'header.php';?>
+<?php
 
-	<div class="bird" id="bird1"></div>
+/*
+ *---------------------------------------------------------------
+ * APPLICATION ENVIRONMENT
+ *---------------------------------------------------------------
+ *
+ * You can load different configurations depending on your
+ * current environment. Setting the environment also influences
+ * things like logging and error reporting.
+ *
+ * This can be set to anything, but default usage is:
+ *
+ *     development
+ *     testing
+ *     production
+ *
+ * NOTE: If you change these, also change the error_reporting() code below
+ *
+ */
+	define('ENVIRONMENT', 'development');
+/*
+ *---------------------------------------------------------------
+ * ERROR REPORTING
+ *---------------------------------------------------------------
+ *
+ * Different environments will require different levels of error reporting.
+ * By default development will show errors but testing and live will hide them.
+ */
 
-  	<div class="navigation">
-  		<div class="wrapper">
-  			<div class="box">
-				<h2>The Wedding</h2>
-				<span><a href="#itinerary">Itinerary</a> &bull; <a href="#rsvp">RSVP</a><!-- &bull; <a href="#registry">Registry</a>--></span>
-				<span><a href="#where_to_stay">Where To Stay</a> &bull; <a href="#about_calgary">About Calgary</a></span>
-			</div>
-			<img src="images/photo_1.png" alt="" class="rotate" />
-  		</div>
-  	</div>
+if (defined('ENVIRONMENT'))
+{
+	switch (ENVIRONMENT)
+	{
+		case 'development':
+			error_reporting(E_ALL);
+		break;
 
-  	<div class="page">
-  		<div class="wrapper">
-  			<div class="section" id="itinerary">
-				<h3><img src="images/itinerary.png" alt="Itinerary" /></h3>
-				<p>The wedding ceremony and reception will be held on Sunday, February 17th, 2013. All other details will be announced soon.</p>
-			</div>
-			<div class="divider"><span class="highlight">&bull;</span>&bull;</div>
-			<div class="section" id="rsvp">
-				<h3><img src="images/rsvp.png" alt="RSVP" /><!-- + <a id="registry"><img src="images/registry.png" alt="Registry" /></a>--> + <a id="where_to_stay"><img src="images/where_to_stay.png" alt="Where To Stay" /></a></h3>
-				<p>To be announced.</p>
-			</div>
-			<div class="divider">&bull;<span class="highlight">&bull;</span></div>
-			<div class="section" id="about_calgary">
-				<h3><img src="images/about_calgary.png" alt="About Calgary" /></h3>
-				<p>We live in <a href="http://en.wikipedia.org/wiki/Calgary">Calgary, Alberta</a> and we couldn't think of a better place to bring our family and friends for our wedding than our home. Some of you will already know what Calgary is like in February but for those of you that don't, we will break the news: it's cold. But the Canadian winter, as chilly as it may be, is beautiful, so please remember: there is no bad weather, only bad clothes!</p>
-				<p>We've recommended our favourite things to eat, see and do in and around Calgary in February. Have a wonderful time!</p>
+		case 'testing':
+		case 'production':
+			error_reporting(0);
+		break;
 
-				<div class="triple left">
-					<img src="images/calgary.png" style="left: 192px;" alt="" class="rotate" id="calgary1" />
-					<img src="images/calgary_peace_bridge.png" style="top: 184px;" alt="" class="rotate" id="calgary2" />
-					<img src="images/calgary_aurora.png" style="top: 312px; left: 104px;" alt="" class="rotate" id="calgary3" />
-				</div>
+		default:
+			exit('The application environment is not set correctly.');
+	}
+}
 
-				<div class="double right">
-					<h4>Eat.</h4>
-					<ul>
-						<li><a href="http://taste-restaurant.com/">Taste</a></li>
-						<li><a href="http://unapizzeria.com/">Una</a></li>
-						<li><a href="http://borgo.ca/">Borgo</a></li>
-						<li><a href="http://wurst.ca/">Wurst</a></li>
-						<li><a href="http://www.charcut.com/">Charcut</a></li>
-						<li><a href="http://www.vinroom.com/">Vin Room</a></li>
-						<li><a href="http://bistro2210.com/">Bistro 2210</a></li>
-						<li><a href="http://anju.ca/">Anju</a></li>
-						<li><a href="http://bonterra.ca/">Bon Terra</a></li>
-						<li><a href="http://www.rougecalgary.com/">Rouge</a></li>
-					</ul>
-					<h4>See.</h4>
-					<ul>
-						<li><a href="https://www.google.ca/search?sourceid=chrome&amp;ie=UTF-8&amp;q=prince's+island+park">Prince's Island Park</a></li>
-						<li><a href="http://en.wikipedia.org/wiki/Peace_Bridge_(Calgary)">The Peace Bridge</a></li>
-						<li><a href="http://www.calgarymlc.ca/explore-projects/river-walk">River Walk</a></li>
-						<li><a href="http://en.wikipedia.org/wiki/Stephen_Avenue">Stephen Avenue Mall</a></li>
-						<li><a href="http://www.calgarytower.com/">The Calgary Tower</a></li>
-						<li><a href="http://en.wikipedia.org/wiki/Devonian_Gardens_(Calgary)">Devonian Gardens</a> and <a href="http://www.coreshopping.ca/">The Core</a></li>
-						<li><a href="http://www.banfflakelouise.com/">Banff National Park</a>: see the <a href="http://en.wikipedia.org/wiki/Banff,_Alberta">Banff townsite</a>, and continue further to the jewel of the Rockies, <a href="http://en.wikipedia.org/wiki/Lake_Louise,_Alberta">Lake Louise</a></li>
-					</ul>
-					<h4>Do.</h4>
-					<ul>
-						<li><a href="http://www.calgary.ca/CSPS/Parks/Pages/Locations/Downtown-parks/Olympic-Plaza.aspx">Skating at Olympic Plaza</a></li>
-						<li><a href="http://uptown17.ca/">Shopping on 17th Avenue</a> and grab some tea where <a href="http://www.urbanspoon.com/r/15/1437650/restaurant/Uptown-17th-Ave/Steeps-the-Urban-Teahouse-Calgary">Derek and Hailey first met!</a></li>
-						<li>Downhill skiing & boarding for beginners in the city at <a href="http://www.winsportcanada.ca/cop/index_cop.cfm">Canada Olympic Park</a>, or for more comfortable carvers at <a href="http://www.skibanff.com/">Sunshine Village</a> and <a href="http://www.skilouise.com/">Lake Louise Mountain Resort</a></li>
-						<li>Snowshoeing and cross-country skiing in <a href="http://tpr.alberta.ca/parks/fishcreek/winterrecreat.asp">Fish Creek Provincial Park</a>, or all that and dog sledding in nearby <a href="http://www.tourismcanmore.com/activities/winter-activities/">Canmore</a></li>
-					</ul>
-				</div>
-			</div>
-  		</div>
-  	</div>
+/*
+ *---------------------------------------------------------------
+ * SYSTEM FOLDER NAME
+ *---------------------------------------------------------------
+ *
+ * This variable must contain the name of your "system" folder.
+ * Include the path if the folder is not in the same  directory
+ * as this file.
+ *
+ */
+	$system_path = 'ci_sys_2.1.2';
 
-<?php include 'footer.php';?>
+/*
+ *---------------------------------------------------------------
+ * APPLICATION FOLDER NAME
+ *---------------------------------------------------------------
+ *
+ * If you want this front controller to use a different "application"
+ * folder then the default one you can set its name here. The folder
+ * can also be renamed or relocated anywhere on your server.  If
+ * you do, use a full server path. For more info please see the user guide:
+ * http://codeigniter.com/user_guide/general/managing_apps.html
+ *
+ * NO TRAILING SLASH!
+ *
+ */
+	$application_folder = 'ci_app_2.1.2';
+
+/*
+ * --------------------------------------------------------------------
+ * DEFAULT CONTROLLER
+ * --------------------------------------------------------------------
+ *
+ * Normally you will set your default controller in the routes.php file.
+ * You can, however, force a custom routing by hard-coding a
+ * specific controller class/function here.  For most applications, you
+ * WILL NOT set your routing here, but it's an option for those
+ * special instances where you might want to override the standard
+ * routing in a specific front controller that shares a common CI installation.
+ *
+ * IMPORTANT:  If you set the routing here, NO OTHER controller will be
+ * callable. In essence, this preference limits your application to ONE
+ * specific controller.  Leave the function name blank if you need
+ * to call functions dynamically via the URI.
+ *
+ * Un-comment the $routing array below to use this feature
+ *
+ */
+	// The directory name, relative to the "controllers" folder.  Leave blank
+	// if your controller is not in a sub-folder within the "controllers" folder
+	// $routing['directory'] = '';
+
+	// The controller class file name.  Example:  Mycontroller
+	// $routing['controller'] = '';
+
+	// The controller function you wish to be called.
+	// $routing['function']	= '';
+
+
+/*
+ * -------------------------------------------------------------------
+ *  CUSTOM CONFIG VALUES
+ * -------------------------------------------------------------------
+ *
+ * The $assign_to_config array below will be passed dynamically to the
+ * config class when initialized. This allows you to set custom config
+ * items or override any default config values found in the config.php file.
+ * This can be handy as it permits you to share one application between
+ * multiple front controller files, with each file containing different
+ * config values.
+ *
+ * Un-comment the $assign_to_config array below to use this feature
+ *
+ */
+	// $assign_to_config['name_of_config_item'] = 'value of config item';
+
+
+
+// --------------------------------------------------------------------
+// END OF USER CONFIGURABLE SETTINGS.  DO NOT EDIT BELOW THIS LINE
+// --------------------------------------------------------------------
+
+/*
+ * ---------------------------------------------------------------
+ *  Resolve the system path for increased reliability
+ * ---------------------------------------------------------------
+ */
+
+	// Set the current directory correctly for CLI requests
+	if (defined('STDIN'))
+	{
+		chdir(dirname(__FILE__));
+	}
+
+	if (realpath($system_path) !== FALSE)
+	{
+		$system_path = realpath($system_path).'/';
+	}
+
+	// ensure there's a trailing slash
+	$system_path = rtrim($system_path, '/').'/';
+
+	// Is the system path correct?
+	if ( ! is_dir($system_path))
+	{
+		exit("Your system folder path does not appear to be set correctly. Please open the following file and correct this: ".pathinfo(__FILE__, PATHINFO_BASENAME));
+	}
+
+/*
+ * -------------------------------------------------------------------
+ *  Now that we know the path, set the main path constants
+ * -------------------------------------------------------------------
+ */
+	// The name of THIS file
+	define('SELF', pathinfo(__FILE__, PATHINFO_BASENAME));
+
+	// The PHP file extension
+	// this global constant is deprecated.
+	define('EXT', '.php');
+
+	// Path to the system folder
+	define('BASEPATH', str_replace("\\", "/", $system_path));
+
+	// Path to the front controller (this file)
+	define('FCPATH', str_replace(SELF, '', __FILE__));
+
+	// Name of the "system folder"
+	define('SYSDIR', trim(strrchr(trim(BASEPATH, '/'), '/'), '/'));
+
+
+	// The path to the "application" folder
+	if (is_dir($application_folder))
+	{
+		define('APPPATH', $application_folder.'/');
+	}
+	else
+	{
+		if ( ! is_dir(BASEPATH.$application_folder.'/'))
+		{
+			exit("Your application folder path does not appear to be set correctly. Please open the following file and correct this: ".SELF);
+		}
+
+		define('APPPATH', BASEPATH.$application_folder.'/');
+	}
+
+/*
+ * --------------------------------------------------------------------
+ * LOAD THE BOOTSTRAP FILE
+ * --------------------------------------------------------------------
+ *
+ * And away we go...
+ *
+ */
+require_once BASEPATH.'core/CodeIgniter.php';
+
+/* End of file index.php */
+/* Location: ./index.php */
