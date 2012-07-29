@@ -1,0 +1,502 @@
+$beige-light: #F0E7D8;
+$beige-dark: #DBCBB0;
+$chocolate: #5A3A08;
+$pink-light: #F0C0C0;
+$pink-dark: #F37A7A;
+$white: #FFF;
+$grey: #888;
+$black: #000;
+
+$font-large: 1.71em;
+$font-big: 1.29em;
+$font-normal: 13px;
+
+$gap: 64px;
+
+@mixin border($colour: $beige-dark) {
+	border: 8px solid $colour;
+}
+
+@mixin shadow {
+	-moz-box-shadow: 4px 4px 24px rgba(0, 0, 0, .6);
+	-webkit-box-shadow: 4px 4px 24px rgba(0, 0, 0, .6);
+	box-shadow: 4px 4px 24px rgba(0, 0, 0, .6);
+}
+
+a {
+	color: $pink-dark;
+	text-decoration: none;
+
+	&:hover {
+		text-decoration: underline;
+	}
+
+	img {
+		border: none;
+	}
+}
+
+p {
+	margin-bottom: 32px;
+}
+
+body {
+	background-image: url(../images/grain.png);
+	background-color: $white;
+	font-family: Futura, Lucida Sans Unicode, Lucida Grande, sans-serif;
+	font-size: $font-normal;
+	margin: 0;
+	padding: 0;
+	height: auto;
+	width: 100%;
+	position: absolute;
+	min-height: 100%;
+	line-height: 1.3;
+	color: $chocolate;
+}
+
+div.background {
+	position: absolute;
+	z-index: -1;
+	background: url(../images/photo.png) no-repeat 0 -72px;
+	width: 100%;
+	height: 100%;
+}
+
+div.bird {
+	position: absolute;
+	width: 100%;
+	height: 500px;
+
+	&#bird1 {
+		background: url(../images/bird_flight.png) no-repeat 204px 56px;
+		top: 840px;
+		left: 0;
+	}
+
+	&#bird2 {
+		background: url(../images/bird_flight_2.png) no-repeat 0px 0px;
+		top: 1680px;
+		left: 0;
+	}
+}
+
+div.wrapper {
+	margin: 0 auto;
+	padding: 0 16px;
+	width: 944px;
+	position: relative;
+}
+
+div.title {
+	padding-top: $gap;
+	width: 100%;
+
+	img {
+		float: left;
+		margin-top: 6px;
+	}
+
+	hr {
+		height: 8px;
+		background-color: $beige-dark;
+		border: 0;
+		position: absolute;
+		top: 96px;
+		width: 100%;
+		z-index: -1;
+	}
+
+	ul.menu {
+		padding-left: 0;
+		margin: 0 0 0 368px;
+		height: 96px;
+
+		li {
+			list-style: none;
+			float: left;
+			margin-left: 16px;
+
+			a {
+				display: block;
+				width: 176px;
+				height: 96px;
+				background-color: $chocolate;
+				font-weight: normal;
+				@include shadow;
+
+				span {
+					padding: 8px 8px 0 8px;
+					text-align: center;
+					display: block;
+				}
+
+				span.title {
+					font-size: $font-big;
+					color: $pink-dark;
+					text-transform: lowercase;
+				}
+
+				span.description {
+					margin-top: 8px;
+					color: $white;
+				}
+			}
+
+			a.selected, a:hover {
+				background-color: $pink-dark;
+				text-decoration: none;
+
+				span.title {
+					color: $chocolate;
+				}
+			}
+		}
+	}
+}
+
+div.navigation {
+	padding-top: $gap;
+
+	div.box {
+		@include border;
+		border-right: none;
+		width: 376px;
+		height: 224px;
+		margin-top: 130px;
+		float: left;
+		background-color: $beige-light;
+		text-transform: lowercase;
+
+		h2, span {
+			width: 360px;
+			text-align: center;
+		}
+
+		h2 {
+			margin-top: 58px;
+			color: $chocolate;
+			font-size: $font-large;
+		}
+
+		span {
+			display: block;
+			font-size: $font-big;
+		}
+	}
+
+	img {
+		@include border($chocolate);
+		float: right;
+		width: 544px;
+		height: 410px;
+		@include shadow;
+	}
+}
+
+div.page {
+	clear:both;
+	padding-top: 1px;
+
+	h3, p {
+		width: 560px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	h3 img {
+		border: none;
+		vertical-align: middle;
+	}
+
+	h4 {
+		font-size: $font-big;
+		color: $chocolate;
+		font-weight: normal;
+		margin-top: 0;
+	}
+
+	img {
+		@include border;
+	}
+
+	img.no_border {
+		border: none;
+	}
+
+	div.section {
+		margin-top: $gap;
+
+		&#about_calgary {
+			img.rotate {
+				position: absolute;
+			}
+		}
+
+		&#our_family {
+			img.scale {
+				position: absolute;
+			}
+
+			p {
+				width: auto;
+			}
+
+			div.triple {
+				height: 823px;
+			}
+
+			div.double {
+				margin-top: 128px;
+				z-index: -1;
+			}
+		}
+	}
+
+	div.divider + div.section {
+		margin: $gap/2 0;
+	}
+
+	div.divider {
+		position: relative;
+		z-index: -1;
+		color: $beige-light;
+		text-align: center;
+		font-size: $font-big;
+		clear: both;
+
+		span.highlight {
+			color: $beige-dark;
+		}
+	}
+
+	div.wedding_party {
+		width: 368px;
+		height: 1039px;
+		float: left;
+
+		h4 {
+			margin-top: 8px;
+		}
+
+		div.divider {
+			clear: both;
+			padding-top: 33px;
+		}
+
+		a.person {
+			cursor: pointer;
+			position: relative;
+			margin-bottom: -8px;
+			text-decoration: none;
+			float: left;
+			width: 368px;
+
+			img {
+				width: 160px;
+				height: 102px;
+				vertical-align: middle;
+			}
+
+			span {
+				margin-left: 16px;
+				color: $chocolate;
+			}
+
+			&:hover, &.selected {
+				z-index: 1;
+
+				span {
+					color: $pink-dark;
+				}
+
+				img {
+					@include border($pink-dark);
+				}
+			}
+		}
+	}
+
+	div.mad_lib {
+		background-image: url(../images/mad_lib.png);
+		width: 590px;
+		height: 1039px;
+		position: absolute;
+		right: 0;
+		z-index: -1;
+
+		div.overlay {
+			position: absolute;
+			background-repeat: no-repeat;
+			background-position: 36px 54px;
+			width: 590px;
+			height: 1039px;
+			display: none;
+
+			&#bonnie_overlay {
+				background-image: url(../images/mad_lib_bonnie.png);
+			}
+			&#lorraine_overlay {
+				background-image: url(../images/mad_lib_lorraine.png);
+			}
+			&#lori_overlay {
+				background-image: url(../images/mad_lib_lori.png);
+			}
+			&#glyn_overlay {
+				background-image: url(../images/mad_lib_glyn.png);
+			}
+			&#cam_overlay {
+				background-image: url(../images/mad_lib_cam.png);
+			}
+			&#serge_overlay {
+				background-image: url(../images/mad_lib_serge.png);
+			}
+			&#kyle_overlay {
+				background-image: url(../images/mad_lib_kyle.png);
+			}
+			&#jason_overlay {
+				background-image: url(../images/mad_lib_jason.png);
+			}
+
+			&.selected {
+				display: inline;
+			}
+		}
+	}
+
+	div.twitter_box {
+		float: left;
+		margin-right: 16px;
+		margin-top: 130px;
+	}
+
+	div.twitter_picture {
+		background-image: url(../images/thought_bubbles.png);
+		background-position: 260px -30px;
+		background-repeat: no-repeat;
+		height: 620px;
+		clear: both;
+
+		img {
+			position: absolute;
+			clear: both;
+			bottom: 0;
+		}
+	}
+}
+
+div.padding {
+	float: left;
+	height: 300px;
+	width: 100%;
+}
+
+div.footer {
+	width: 100%;
+	clear: both;
+	position: absolute;
+	bottom: 0px;
+	font-size: $font-big;
+
+	a {
+		color: $white;
+		font-weight: normal;
+	}
+
+	div.bottom {
+		background-color: $beige-dark;
+		color: $beige-light;
+		height: 92px;
+		padding-top: 36px;
+
+		div.menu {
+			float: left;
+
+			a.watermark {
+				display: block;
+				margin-top: 16px;
+				text-transform: lowercase;
+				font-size: $font-normal;
+			}
+		}
+
+		a.tweets {
+			background: url(../images/birds.png) top right no-repeat;
+			display: block;
+			width: 300px;
+			height: 222px;
+			position: absolute;
+			right: 16px;
+			top: -176px;
+
+			span {
+				text-align: right;
+			}
+
+			span.title {
+				padding-top: 178px;
+				display: block;
+			}
+
+			span.description {
+				display: block;
+				font-size: $font-normal;
+			}
+		}
+	}
+}
+
+.half {
+	margin-left: 96px;
+}
+
+.one {
+	margin-left: 192px;
+}
+
+.double {
+	width: 368px;
+	position: relative;
+}
+
+.triple {
+	width: 560px;
+	position: relative;
+}
+
+.left {
+	float: left;
+}
+
+.right {
+	float: right;
+}
+
+.bold {
+	font-weight: bold;
+}
+
+.rotate, .scale {
+	-moz-transition: all 0.4s ease;
+	-webkit-transition: all 0.4s ease;
+	-o-transition: all 0.4s ease;
+	transition: all 0.4s ease;
+}
+
+.rotate:hover {
+	-moz-transform: rotate(3deg);
+	-webkit-transform: rotate(3deg);
+	-o-transform: rotate(3deg);
+	transform: rotate(3deg);
+}
+
+.scale {
+	&:hover {
+		-moz-transform: scale(1.3);
+		-webkit-transform: scale(1.3);
+		-o-transform: scale(1.3);
+		transform: scale(1.3);
+		@include shadow;
+		z-index: 1;
+	}
+}
