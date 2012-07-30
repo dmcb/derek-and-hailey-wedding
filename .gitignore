@@ -1,5 +1,13 @@
-# Ignore OS X, SASS garbage and .htaccess
+# Ignore OS X and SASS garbage
 .DS_Store*
 Thumbs.db
 .sass-cache
+
+# Ignore system-specific .htaccess
 .htaccess
+
+# Ignore Code Igniter configurations with passwords, cache and logs
+ci_*_application/cache
+ci_*_application/config/config.php
+ci_*_application/config/database.php
+ci_*_application/logs
