@@ -11,7 +11,6 @@ class Csvload extends CI_Controller {
 		else
 		{
 			$this->load->helper(array('file', 'string'));
-			$this->load->dbutil();
 
 			// Load csv file
 			$csv_input_file = 'csv/rsvp.csv';
@@ -77,7 +76,7 @@ class Csvload extends CI_Controller {
 				}
 
 				// Save CSV updated with codes and update database if this hasn't been done before
-				if (!$this->dbutil->database_exists('invitations'))
+				if ($this->db->table_exists('invitations'))
 				{
 					echo 'Invitations database already created.';
 				}
