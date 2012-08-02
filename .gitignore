@@ -11,3 +11,6 @@ ci_app_*/cache
 ci_app_*/config/config.php
 ci_app_*/config/database.php
 ci_app_*/logs
+
+# Ignore CSV files
+csv/*
