@@ -6,7 +6,6 @@ class Csvload extends CI_Controller {
 	{
 		if ($_SERVER['REMOTE_ADDR'] != "127.0.0.1" && $_SERVER['REMOTE_ADDR'] != "::1")
 		{
-			echo $_SERVER['REMOTE_ADDR'];
 			echo "Script is for local use only.";
 		}
 		else
