@@ -13,9 +13,8 @@ class Csvload extends CI_Controller {
 			$this->load->helper(array('file', 'string'));
 
 			// Load csv file
-			$csv_input_file = 'csv/rsvp.csv';
-			$csv_output_file = 'csv/rsvp.withcodes.csv';
-			$data = read_file($csv_input_file);
+			$csv_file = 'csv/rsvp.csv';
+			$data = read_file($csv_file);
 			if (!$data)
 			{
 				echo "rsvp.csv not found";
@@ -56,7 +55,7 @@ class Csvload extends CI_Controller {
 					}
 					else if (!empty($row[$names_of_invited_column]) && !empty($row[$number_invited_column]) && ctype_digit($row[$number_invited_column]) && empty($row[$code_column]))
 					{
-						// If we have an entry for the columns we care about, we will give that invite a code and save it
+						// If we have an entry for a column that has guest names and a total invited number, but an empty code, we will give invite a code and save it
 						$code = strtoupper(random_string(5));
 						$row[$code_column] = $code;
 						$invitations[] = array(
@@ -75,36 +74,29 @@ class Csvload extends CI_Controller {
 					$new_data[] = implode(',',$new_row);
 				}
 
-				// Save CSV updated with codes and update database if this hasn't been done before
-				if ($this->db->table_exists('invitations'))
+				// Save CSV updated with codes and update database for any new invitations
+				if (!write_file($csv_file, implode("\n",$new_data)))
 				{
-					echo 'Invitations database already created.';
+					echo 'Unable to update .csv file. Database not updated.';
 				}
 				else
 				{
-					if (!write_file($csv_output_file, implode("\n",$new_data)))
+					// On success, populate database with invitations
+					$this->db->query("
+						CREATE TABLE IF NOT EXISTS `invitations` (
+						  `code` varchar(5) NOT NULL,
+						  `names_of_invited` varchar(500) NOT NULL,
+						  `names_of_attending` varchar(500) NOT NULL,
+						  `number_invited` int(1) unsigned NOT NULL,
+						  `number_attending` int(1) unsigned NOT NULL,
+						  PRIMARY KEY (`code`)
+						) ENGINE=InnoDB DEFAULT CHARSET=utf8;"
+					);
+					foreach ($invitations as $invitation)
 					{
-						echo 'Unable to save new .csv file';
+						$this->db->query("INSERT into invitations (code, names_of_invited, number_invited) VALUES (".$this->db->escape($invitation['code']).", ".$this->db->escape($invitation['names_of_invited']).", ".$this->db->escape($invitation['number_invited']).")");
 					}
-					else
-					{
-						// On success, populate database with invitations
-						$this->db->query("
-							CREATE TABLE IF NOT EXISTS `invitations` (
-							  `code` varchar(5) NOT NULL,
-							  `names_of_invited` varchar(500) NOT NULL,
-							  `names_of_attending` varchar(500) NOT NULL,
-							  `number_invited` int(1) unsigned NOT NULL,
-							  `number_attending` int(1) unsigned NOT NULL,
-							  PRIMARY KEY (`code`)
-							) ENGINE=InnoDB DEFAULT CHARSET=utf8;"
-						);
-						foreach ($invitations as $invitation)
-						{
-							$this->db->query("INSERT into invitations (code, names_of_invited, number_invited) VALUES (".$this->db->escape($invitation['code']).", ".$this->db->escape($invitation['names_of_invited']).", ".$this->db->escape($invitation['number_invited']).")");
-						}
-						echo 'CSV file written. Database updated.';
-					}
+					echo 'CSV file updated. Database updated.';
 				}
 			}
 		}
