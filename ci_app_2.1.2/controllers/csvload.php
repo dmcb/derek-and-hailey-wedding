@@ -84,12 +84,14 @@ class Csvload extends CI_Controller {
 					// On success, populate database with invitations
 					$this->db->query("
 						CREATE TABLE IF NOT EXISTS `invitations` (
-						  `code` varchar(5) NOT NULL,
-						  `names_of_invited` varchar(500) NOT NULL,
-						  `names_of_attending` varchar(500) NOT NULL,
-						  `number_invited` int(1) unsigned NOT NULL,
-						  `number_attending` int(1) unsigned NOT NULL,
-						  PRIMARY KEY (`code`)
+							`code` varchar(5) NOT NULL,
+							`names_of_invited` varchar(500) NOT NULL,
+							`names_of_attending` varchar(500) NOT NULL,
+							`number_invited` int(1) unsigned NOT NULL,
+							`number_attending` int(1) unsigned DEFAULT NULL,
+							`responded` datetime NOT NULL,
+							`notes` varchar(500) DEFAULT NULL,
+							PRIMARY KEY (`code`)
 						) ENGINE=InnoDB DEFAULT CHARSET=utf8;"
 					);
 					foreach ($invitations as $invitation)

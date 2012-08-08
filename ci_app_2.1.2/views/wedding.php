@@ -17,12 +17,14 @@
 				<h3><img src="assets/images/itinerary.png" alt="Itinerary" /></h3>
 				<p>The wedding ceremony and reception will be held on Sunday, February 17th, 2013. All other details will be announced soon.</p>
 			</div>
-			<div class="divider"><span class="highlight">&bull;</span>&bull;</div>
-			<div class="section" id="rsvp">
-				<h3><img src="assets/images/rsvp.png" alt="RSVP" /><!-- + <a id="registry"><img src="assets/images/registry.png" alt="Registry" /></a>--> + <a id="where_to_stay"><img src="assets/images/where_to_stay.png" alt="Where To Stay" /></a></h3>
-				<p>To be announced.</p>
+			<div class="divider"><span class="highlight">&bull;</span>&bull;&bull;</div>
+<?php echo $rsvp; ?>
+			<div class="divider">&bull;<span class="highlight">&bull;</span>&bull;</div>
+			<div class="section" id="where_to_stay">
+				<h3><a id="where_to_stay"><img src="assets/images/where_to_stay.png" alt="Where To Stay" /></a></h3>
+				<p>Coming soon.</p>
 			</div>
-			<div class="divider">&bull;<span class="highlight">&bull;</span></div>
+			<div class="divider">&bull;&bull;<span class="highlight">&bull;</span></div>
 			<div class="section" id="about_calgary">
 				<h3><img src="assets/images/about_calgary.png" alt="About Calgary" /></h3>
 				<p>We live in <a href="http://en.wikipedia.org/wiki/Calgary">Calgary, Alberta</a> and we couldn't think of a better place to bring our family and friends for our wedding than our home. Some of you will already know what Calgary is like in February but for those of you that don't, we will break the news: it's cold. But the Canadian winter, as chilly as it may be, is beautiful, so please remember: there is no bad weather, only bad clothes!</p>

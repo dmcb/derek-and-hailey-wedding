@@ -1,34 +1,4 @@
 $(document).ready(function(){
-	// Twitter heart effect
-	$("#tweets").hover(
-	function(){
-		if (!$("#heart").is(":animated")) {
-			$("#heart").everyTime(2, function() {
-				$("#heart").animate({top:"10px"}, 0).animate({opacity:1}, 200).animate({top:"-80px", opacity: 0}, 1000, 'linear').delay(400);
-			});
-		}
-	},
-	function() {
-		$("#heart").stopTime();
-		$("#heart").clearQueue();
-	});
-
-	// Wedding party mad lib selection
-	$('.person').click(function() {
-		var selected = false;
-		if ($(this).hasClass('selected')) {
-			selected = true;
-		}
-		$('.person').removeClass('selected');
-		$('.overlay').removeClass('selected');
-		if (!selected) {
-			var id = $(this).attr('id');
-			$(this).addClass('selected');
-			$('.overlay#' + id + '_overlay').addClass('selected');
-		}
-	});
-
-
 	// Flying bird effects
 	var scrollorama = $.scrollorama({
 		blocks:'.scrollblock'
@@ -74,5 +44,53 @@ $(document).ready(function(){
 			easing:'easeInOutBack'
 		});
 	}
+
+	// Twitter heart effect
+	$("#tweets").hover(
+	function(){
+		if (!$("#heart").is(":animated")) {
+			$("#heart").everyTime(2, function() {
+				$("#heart").animate({top:"10px"}, 0).animate({opacity:1}, 200).animate({top:"-80px", opacity: 0}, 1000, 'linear').delay(400);
+			});
+		}
+	},
+	function() {
+		$("#heart").stopTime();
+		$("#heart").clearQueue();
+	});
+
+	// Wedding party mad lib selection
+	$('.person').click(function() {
+		var selected = false;
+		if ($(this).hasClass('selected')) {
+			selected = true;
+		}
+		$('.person').removeClass('selected');
+		$('.overlay').removeClass('selected');
+		if (!selected) {
+			var id = $(this).attr('id');
+			$(this).addClass('selected');
+			$('.overlay#' + id + '_overlay').addClass('selected');
+		}
+	});
+
+	// RSVP Naming
+	$('#number_attending').change(function() {
+		$guests = $(this).val();
+		if ($guests > 0) {
+			$('#names_of_attending').show();
+		}
+		else {
+			$('#names_of_attending').hide();
+		}
+		for ($i=0; $i<10; $i++) {
+			if ($i < $guests) {
+				$('#name_' + $i).show();
+			}
+			else {
+				$('#name_' + $i).hide();
+			}
+		}
+	});
 });
 

@@ -13,7 +13,7 @@ body {
   background-image: url(../images/grain.png);
   background-color: white;
   font-family: Futura, Lucida Sans Unicode, Lucida Grande, sans-serif;
-  font-size: 13px;
+  font-size: 10pt;
   margin: 0;
   padding: 0;
   height: auto;
@@ -130,7 +130,7 @@ div.navigation {
 div.page {
   clear: both;
   padding-top: 1px; }
-  div.page h3, div.page p {
+  div.page h3, div.page p, div.page form {
     width: 560px;
     margin-left: auto;
     margin-right: auto; }
@@ -148,6 +148,42 @@ div.page {
     border: none; }
   div.page div.section {
     margin-top: 64px; }
+    div.page div.section#rsvp span {
+      width: 368px;
+      margin: 0;
+      float: left;
+      text-align: right; }
+    div.page div.section#rsvp input {
+      font-style: Futura, Lucida Sans Unicode, Lucida Grande, sans-serif;
+      text-align: center;
+      display: block;
+      border-radius: 8px; }
+    div.page div.section#rsvp select {
+      float: right;
+      clear: right;
+      width: 176px; }
+    div.page div.section#rsvp input.text {
+      float: right;
+      clear: right;
+      width: 170px; }
+      div.page div.section#rsvp input.text.large {
+        margin-top: -8px; }
+    div.page div.section#rsvp input.button {
+      width: 176px;
+      border: 0;
+      background-color: #f37a7a;
+      font-size: 1.29em;
+      float: right;
+      clear: right;
+      color: white;
+      border-radius: 8px;
+      padding: 4px 8px; }
+      div.page div.section#rsvp input.button:hover {
+        background-color: #5a3a08; }
+    div.page div.section#rsvp p.error {
+      float: right;
+      text-align: right;
+      margin: 8px 0; }
     div.page div.section#about_calgary img.rotate {
       position: absolute; }
     div.page div.section#our_family img.scale {
@@ -271,7 +307,7 @@ div.footer {
         display: block;
         margin-top: 16px;
         text-transform: lowercase;
-        font-size: 13px; }
+        font-size: 10pt; }
     div.footer div.bottom a.tweets {
       background: url(../images/birds.png) top right no-repeat;
       display: block;
@@ -287,7 +323,7 @@ div.footer {
         display: block; }
       div.footer div.bottom a.tweets span.description {
         display: block;
-        font-size: 13px; }
+        font-size: 10pt; }
 
 .half {
   margin-left: 96px; }
@@ -311,6 +347,12 @@ div.footer {
 
 .bold {
   font-weight: bold; }
+
+.error {
+  color: #f37a7a; }
+
+.large {
+  font-size: 1.71em; }
 
 .rotate, .scale {
   -moz-transition: all 0.4s ease;

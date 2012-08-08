@@ -9,7 +9,7 @@ $black: #000;
 
 $font-large: 1.71em;
 $font-big: 1.29em;
-$font-normal: 13px;
+$font-normal: 10pt;
 
 $gap: 64px;
 
@@ -198,7 +198,7 @@ div.page {
 	clear:both;
 	padding-top: 1px;
 
-	h3, p {
+	h3, p, form {
 		width: 560px;
 		margin-left: auto;
 		margin-right: auto;
@@ -226,6 +226,60 @@ div.page {
 
 	div.section {
 		margin-top: $gap;
+
+		&#rsvp {
+			span {
+				width: 368px;
+				margin: 0;
+				float: left;
+				text-align: right;
+			}
+
+			input {
+				font-style: Futura, Lucida Sans Unicode, Lucida Grande, sans-serif;
+				text-align: center;
+				display: block;
+				border-radius: 8px;
+			}
+
+			select {
+				float: right;
+				clear: right;
+				width: 176px;
+			}
+
+			input.text {
+				float: right;
+				clear: right;
+				width: 170px;
+
+				&.large {
+					margin-top: -8px;
+				}
+			}
+
+			input.button {
+				width: 176px;
+				border: 0;
+				background-color: $pink-dark;
+				font-size: $font-big;
+				float: right;
+				clear: right;
+				color: $white;
+				border-radius: 8px;
+				padding: 4px 8px;
+
+				&:hover  {
+					background-color: $chocolate;
+				}
+			}
+
+			p.error {
+				float: right;
+				text-align: right;
+				margin: 8px 0;
+			}
+		}
 
 		&#about_calgary {
 			img.rotate {
@@ -474,6 +528,14 @@ div.footer {
 
 .bold {
 	font-weight: bold;
+}
+
+.error {
+	color: $pink-dark;
+}
+
+.large {
+	font-size: $font-large;
 }
 
 .rotate, .scale {
