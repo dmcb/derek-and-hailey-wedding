@@ -1,5 +1,5 @@
   			<div class="section" id="rsvp">
-  				<h3><img src="assets/images/rsvp.png" alt="RSVP" /></h3>
+  				<h3><img src="<?php echo base_url();?>assets/images/rsvp.png" alt="RSVP" /></h3>
 				<p>Dear
 				<?php
 				for ($i=0; $i<sizeof($invitation['names_of_invited']); $i++)
@@ -51,6 +51,6 @@
 					}
 					?>
 					<?php echo validation_errors(); ?>
-					<input type="submit" name="rsvp" id="rsvp" value="RSVP" class="button"/>
+					<input type="submit" name="submit" id="submit" value="Submit response" class="button"/>
 				</form>
 			</div>

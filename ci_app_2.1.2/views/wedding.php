@@ -7,33 +7,33 @@
 				<span><a href="#itinerary">Itinerary</a> &bull; <a href="#rsvp">RSVP</a><!-- &bull; <a href="#registry">Registry</a>--></span>
 				<span><a href="#where_to_stay">Where To Stay</a> &bull; <a href="#about_calgary">About Calgary</a></span>
 			</div>
-			<img src="assets/images/photo_1.png" alt="" class="rotate" />
+			<img src="<?php echo base_url();?>assets/images/photo_1.png" alt="" class="rotate" />
   		</div>
   	</div>
 
   	<div class="page">
   		<div class="wrapper">
   			<div class="section" id="itinerary">
-				<h3><img src="assets/images/itinerary.png" alt="Itinerary" /></h3>
+				<h3><img src="<?php echo base_url();?>assets/images/itinerary.png" alt="Itinerary" /></h3>
 				<p>The wedding ceremony and reception will be held on Sunday, February 17th, 2013. All other details will be announced soon.</p>
 			</div>
 			<div class="divider"><span class="highlight">&bull;</span>&bull;&bull;</div>
 <?php echo $rsvp; ?>
 			<div class="divider">&bull;<span class="highlight">&bull;</span>&bull;</div>
 			<div class="section" id="where_to_stay">
-				<h3><a id="where_to_stay"><img src="assets/images/where_to_stay.png" alt="Where To Stay" /></a></h3>
+				<h3><a id="where_to_stay"><img src="<?php echo base_url();?>assets/images/where_to_stay.png" alt="Where To Stay" /></a></h3>
 				<p>Coming soon.</p>
 			</div>
 			<div class="divider">&bull;&bull;<span class="highlight">&bull;</span></div>
 			<div class="section" id="about_calgary">
-				<h3><img src="assets/images/about_calgary.png" alt="About Calgary" /></h3>
+				<h3><img src="<?php echo base_url();?>assets/images/about_calgary.png" alt="About Calgary" /></h3>
 				<p>We live in <a href="http://en.wikipedia.org/wiki/Calgary">Calgary, Alberta</a> and we couldn't think of a better place to bring our family and friends for our wedding than our home. Some of you will already know what Calgary is like in February but for those of you that don't, we will break the news: it's cold. But the Canadian winter, as chilly as it may be, is beautiful, so please remember: there is no bad weather, only bad clothes!</p>
 				<p>We've recommended our favourite things to eat, see and do in and around Calgary in February. Have a wonderful time!</p>
 
 				<div class="triple left">
-					<img src="assets/images/calgary.png" style="left: 192px;" alt="" class="rotate" id="calgary1" />
-					<img src="assets/images/calgary_peace_bridge.png" style="top: 184px;" alt="" class="rotate" id="calgary2" />
-					<img src="assets/images/calgary_aurora.png" style="top: 312px; left: 104px;" alt="" class="rotate" id="calgary3" />
+					<img src="<?php echo base_url();?>assets/images/calgary.png" style="left: 192px;" alt="" class="rotate" id="calgary1" />
+					<img src="<?php echo base_url();?>assets/images/calgary_peace_bridge.png" style="top: 184px;" alt="" class="rotate" id="calgary2" />
+					<img src="<?php echo base_url();?>assets/images/calgary_aurora.png" style="top: 312px; left: 104px;" alt="" class="rotate" id="calgary3" />
 				</div>
 
 				<div class="double right">

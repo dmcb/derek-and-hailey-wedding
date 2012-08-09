@@ -8,16 +8,16 @@
 
     <title>The Wedding | Derek &amp; Hailey</title>
 
-    <style type="text/css">@import "assets/styles/style.css";</style>
+    <style type="text/css">@import "<?php echo base_url();?>assets/styles/style.css";</style>
 
 	<!--[if IE 7]>
-		<style type="text/css">@import "assets/styles/ie7hacks.css";</style>
+		<style type="text/css">@import "<?php echo base_url();?>assets/styles/ie7hacks.css";</style>
 	<![endif]-->
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script src="assets/scripts/jquery.timers-1.1.2.js"></script>
-    <script src="assets/scripts/jquery.scrollorama.js"></script>
-    <script src="assets/scripts/script.js"></script>
+    <script src="<?php echo base_url();?>assets/scripts/jquery.timers-1.1.2.js"></script>
+    <script src="<?php echo base_url();?>assets/scripts/jquery.scrollorama.js"></script>
+    <script src="<?php echo base_url();?>assets/scripts/script.js"></script>
 
 	<!-- Google Analytics -->
 	<script type="text/javascript">
@@ -39,7 +39,7 @@
   	<div class="title">
   		<hr/>
   		<div class="wrapper">
-			<a href="./"><img src="assets/images/derek_and_hailey.png" alt="Derek &amp; Hailey"/></a>
+			<a href="./"><img src="<?php echo base_url();?>assets/images/derek_and_hailey.png" alt="Derek &amp; Hailey"/></a>
 
 			<?php
 				$uri_segments = explode("/", $_SERVER['REQUEST_URI']);
@@ -80,14 +80,14 @@
   		<div class="bottom">
 			<div class="wrapper">
 				<a class="tweets" id="tweets" href="tweets">
-					<img src="assets/images/heart.png" alt="" style="position: absolute; top:10px; left:156px;" id="heart" />
+					<img src="<?php echo base_url();?>assets/images/heart.png" alt="" style="position: absolute; top:10px; left:156px;" id="heart" />
 					<span class="title">See Derek and Hailey's tweets</span>
 					<span class="description">(It's how we met)</span>
 				</a>
 
 				<div class="menu">
 					<a href="./">the wedding</a> &bull; <a href="wedding-party">the wedding party</a> &bull; <a>photos + blog</a>
-					<a class="watermark" href="http://dmcbdesign.com"><img src="assets/images/watermark.png" alt="Made with love by dmcb design" /></a>
+					<a class="watermark" href="http://dmcbdesign.com"><img src="<?php echo base_url();?>assets/images/watermark.png" alt="Made with love by dmcb design" /></a>
 				</div>
 			</div>
 		</div>
