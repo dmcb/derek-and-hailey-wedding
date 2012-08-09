@@ -22,7 +22,20 @@ class Pages extends CI_Controller {
 				{
 					// User has submitted a correct code, start a session
 					$this->session->set_userdata(array('code' => set_value('code')));
-					redirect(base_url().'#rsvp');
+
+					if ($this->uri->segment(2) == "ajax")
+					{
+						// Get invitation information
+						$query = $this->db->query("SELECT * FROM invitations WHERE code = ".$this->db->escape($this->session->userdata('code')));
+						$invitation = $query->row_array();
+						$invitation['names_of_invited'] = explode(',', $invitation['names_of_invited']);
+
+						$data['rsvp'] = $this->load->view('rsvp_code_given', array('invitation' => $invitation), TRUE);
+					}
+					else
+					{
+						redirect(base_url().'#rsvp');
+					}
 				}
 				else
 				{
@@ -56,9 +69,9 @@ class Pages extends CI_Controller {
 						$names_of_attending .= set_value('name_'.$i);
 					}
 
-					$this->db->query("UPDATE invitations SET names_of_attending = ".$this->db->escape($names_of_attending).", number_invited = ".$this->db->escape(set_value('number_attending')).", responded = NOW() WHERE code = ".$this->db->escape($this->session->userdata('code')));
+					$this->db->query("UPDATE invitations SET names_of_attending = ".$this->db->escape($names_of_attending).", number_attending = ".$this->db->escape(set_value('number_attending')).", responded = NOW() WHERE code = ".$this->db->escape($this->session->userdata('code')));
 					$this->session->sess_destroy();
-					$data['rsvp'] = $this->load->view('rsvp_completed', array('invitation' => $invitation), TRUE);
+					$data['rsvp'] = $this->load->view('rsvp_completed', NULL, TRUE);
 				}
 				else
 				{
@@ -67,7 +80,14 @@ class Pages extends CI_Controller {
 			}
 		}
 
-		$this->load->view('page', array('content' => $this->load->view($page, $data, TRUE)));
+		if ($this->uri->segment(2) == "ajax")
+		{
+			echo json_encode($data['rsvp']);
+		}
+		else
+		{
+			$this->load->view('page', array('content' => $this->load->view($page, $data, TRUE)));
+		}
 	}
 
 	public function ban_check($str)

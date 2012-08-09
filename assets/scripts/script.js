@@ -59,23 +59,8 @@ $(document).ready(function(){
 		$("#heart").clearQueue();
 	});
 
-	// Wedding party mad lib selection
-	$('.person').click(function() {
-		var selected = false;
-		if ($(this).hasClass('selected')) {
-			selected = true;
-		}
-		$('.person').removeClass('selected');
-		$('.overlay').removeClass('selected');
-		if (!selected) {
-			var id = $(this).attr('id');
-			$(this).addClass('selected');
-			$('.overlay#' + id + '_overlay').addClass('selected');
-		}
-	});
-
 	// RSVP Naming
-	$('#number_attending').change(function() {
+	$('#number_attending').live('change', function() {
 		$guests = $(this).val();
 		if ($guests > 0) {
 			$('#names_of_attending').show();
@@ -90,6 +75,60 @@ $(document).ready(function(){
 			else {
 				$('#name_' + $i).hide();
 			}
+		}
+	});
+
+	//
+	$('#enter').live('click', function() {
+		$.ajax({
+			type: 'POST',
+			url: window.location.pathname + "/wedding/ajax",
+			data: { code: $('#code').val() },
+			dataType: 'json',
+			success: function(html) {
+				$('#rsvp').replaceWith(html);
+			},
+			error: function() {
+				alert('Code entry failed. Please try again.');
+			}
+		});
+		return false;
+	});
+
+	$('#submit').live('click', function() {
+		data = "number_attending=" + $('#number_attending').val()
+		for ($i=0; $i<10; $i++) {
+			if ($i < $('#number_attending').val()) {
+				data = data + '&name_' + $i + '=' + $('#name_' + $i).val();
+			}
+		}
+		$.ajax({
+			type: 'POST',
+			url: window.location.pathname + "/wedding/ajax",
+			data: data,
+			dataType: 'json',
+			success: function(html) {
+				$('#rsvp').replaceWith(html);
+			},
+			error: function() {
+				alert('Your response failed. Please try again.');
+			}
+		});
+		return false;
+	});
+
+	// Wedding party mad lib selection
+	$('.person').click(function() {
+		var selected = false;
+		if ($(this).hasClass('selected')) {
+			selected = true;
+		}
+		$('.person').removeClass('selected');
+		$('.overlay').removeClass('selected');
+		if (!selected) {
+			var id = $(this).attr('id');
+			$(this).addClass('selected');
+			$('.overlay#' + id + '_overlay').addClass('selected');
 		}
 	});
 });
