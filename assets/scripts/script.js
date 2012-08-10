@@ -80,6 +80,8 @@ $(document).ready(function(){
 
 	//
 	$('#enter').live('click', function() {
+		$("#load").show();
+		$('#enter').hide();
 		$.ajax({
 			type: 'POST',
 			url: window.location.pathname + "/wedding/ajax",
@@ -96,6 +98,8 @@ $(document).ready(function(){
 	});
 
 	$('#submit').live('click', function() {
+		$("#load").show();
+		$('#submit').hide();
 		data = "number_attending=" + $('#number_attending').val()
 		for ($i=0; $i<10; $i++) {
 			if ($i < $('#number_attending').val()) {

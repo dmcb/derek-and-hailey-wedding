@@ -51,6 +51,7 @@
 					}
 					?>
 					<?php echo validation_errors(); ?>
+					<img src="<?php echo base_url();?>assets/images/load.gif" alt="Loading..." id="load" style="display: none;"/>
 					<input type="submit" name="submit" id="submit" value="Submit response" class="button"/>
 				</form>
 			</div>

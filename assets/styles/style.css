@@ -184,6 +184,11 @@ div.page {
       float: right;
       text-align: right;
       margin: 8px 0; }
+    div.page div.section#rsvp #load {
+      float: right;
+      margin: 2px 80px 2px 0;
+      border: none;
+      padding: 6px 0; }
     div.page div.section#about_calgary img.rotate {
       position: absolute; }
     div.page div.section#our_family img.scale {
