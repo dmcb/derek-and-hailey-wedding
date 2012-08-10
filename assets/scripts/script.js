@@ -91,7 +91,7 @@ $(document).ready(function(){
 				$('#rsvp').replaceWith(html);
 			},
 			error: function() {
-				$("#submit").show();
+				$("#enter").show();
 				$('#load').hide();
 				alert('Code entry failed. Please try again.');
 			}
