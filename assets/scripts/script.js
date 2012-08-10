@@ -84,7 +84,7 @@ $(document).ready(function(){
 		$('#enter').hide();
 		$.ajax({
 			type: 'POST',
-			url: window.location.pathname + "/wedding/ajax",
+			url: "wedding/ajax",
 			data: { code: $('#code').val() },
 			dataType: 'json',
 			success: function(html) {
@@ -111,7 +111,7 @@ $(document).ready(function(){
 		}
 		$.ajax({
 			type: 'POST',
-			url: window.location.pathname + "/wedding/ajax",
+			url: "wedding/ajax",
 			data: data,
 			dataType: 'json',
 			success: function(html) {
