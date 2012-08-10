@@ -16,6 +16,15 @@ class Pages extends CI_Controller {
 		{
 			if (!$this->session->userdata('code'))
 			{
+				$this->db->query("
+					CREATE TABLE IF NOT EXISTS `failed_codes` (
+						`ip` varchar(45) NOT NULL,
+						`count` int(8) unsigned NOT NULL,
+						`last_attempt` datetime NOT NULL,
+						PRIMARY KEY (`ip`)
+					) ENGINE=InnoDB DEFAULT CHARSET=utf8;"
+				);
+
 				$this->form_validation->set_error_delimiters('<p class="error">', '</p>');
 				$this->form_validation->set_rules('code', 'RSVP code', 'xss_clean|required|callback_ban_check|exact_length[5]|alpha_numeric|callback_code_check');
 				if ($this->form_validation->run())
@@ -54,24 +63,39 @@ class Pages extends CI_Controller {
 
 				for ($i=0; $i<10; $i++)
 				{
-					$this->form_validation->set_rules('name_'.$i, 'guest name', 'xss_clean|min_length[2]|max_length[49]|alpha');
+					$this->form_validation->set_rules('name_'.$i, 'guest name', 'xss_clean|min_length[2]|max_length[49]|alpha|callback_names_check['.$i.']');
 				}
 
 				if ($this->form_validation->run())
 				{
 					$names_of_attending = "";
-					for ($i=0; $i<set_value('number_attending'); $i++)
+					if ($invitation['number_invited'] == 1)
 					{
-						if ($i != 0)
+						$names_of_attending = $invitation['names_of_invited'][0];
+					}
+					else
+					{
+						for ($i=0; $i<set_value('number_attending'); $i++)
 						{
-							$names_of_attending .= ',';
+							if ($i != 0)
+							{
+								$names_of_attending .= ',';
+							}
+							$names_of_attending .= set_value('name_'.$i);
 						}
-						$names_of_attending .= set_value('name_'.$i);
 					}
 
 					$this->db->query("UPDATE invitations SET names_of_attending = ".$this->db->escape($names_of_attending).", number_attending = ".$this->db->escape(set_value('number_attending')).", responded = NOW() WHERE code = ".$this->db->escape($this->session->userdata('code')));
 					$this->session->sess_destroy();
-					$data['rsvp'] = $this->load->view('rsvp_completed', NULL, TRUE);
+					$number_attending = set_value('number_attending');
+					if ($number_attending)
+					{
+						$data['rsvp'] = $this->load->view('rsvp_accepted', NULL, TRUE);
+					}
+					else
+					{
+						$data['rsvp'] = $this->load->view('rsvp_declined', NULL, TRUE);
+					}
 				}
 				else
 				{
@@ -126,6 +150,21 @@ class Pages extends CI_Controller {
 		else
 		{
 			$this->db->query("UPDATE failed_codes SET count = '0' WHERE ip = ".$this->db->escape($_SERVER['REMOTE_ADDR']));
+			return TRUE;
+		}
+	}
+
+	public function names_check($str, $name_number)
+	{
+		$number_attending = set_value('number_attending');
+		$name = set_value('name_'.$name_number);
+		if ($name_number < $number_attending && empty($name))
+		{
+			$this->form_validation->set_message('names_check', 'Please enter the name of the guest.');
+			return FALSE;
+		}
+		else
+		{
 			return TRUE;
 		}
 	}

@@ -186,6 +186,7 @@ div.page {
       margin: 8px 0; }
     div.page div.section#rsvp #load {
       float: right;
+      clear: right;
       margin: 2px 80px 2px 0;
       border: none;
       padding: 6px 0; }

@@ -78,7 +78,7 @@ $(document).ready(function(){
 		}
 	});
 
-	//
+	// Code submission
 	$('#enter').live('click', function() {
 		$("#load").show();
 		$('#enter').hide();
@@ -97,6 +97,7 @@ $(document).ready(function(){
 		return false;
 	});
 
+	// RSVP details submission
 	$('#submit').live('click', function() {
 		$("#load").show();
 		$('#submit').hide();
