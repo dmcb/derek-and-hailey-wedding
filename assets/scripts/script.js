@@ -91,6 +91,8 @@ $(document).ready(function(){
 				$('#rsvp').replaceWith(html);
 			},
 			error: function() {
+				$("#submit").show();
+				$('#load').hide();
 				alert('Code entry failed. Please try again.');
 			}
 		});
@@ -116,7 +118,9 @@ $(document).ready(function(){
 				$('#rsvp').replaceWith(html);
 			},
 			error: function() {
-				alert('Your response failed. Please try again.');
+				$("#submit").show();
+				$('#load').hide();
+				alert('Response entry failed. Please try again.');
 			}
 		});
 		return false;
