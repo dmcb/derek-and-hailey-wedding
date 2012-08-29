@@ -15,6 +15,7 @@
 				}
 				?></h4>
 				<p>It's great to hear from you! Thanks for taking a few moments to stop in. Now, let us know if we can expect to see you or if we can rely on your well-wishes from afar.</p>
+				<p>If you have any questions or concerns, please contact us at <a href="mailto:contact@derekandhailey.com">contact@derekandhailey.com</a>.</p>
 
 				<form method="post" accept-charset="utf-8" action="<?php current_url();?>">
 					<span>Number attending</span>
