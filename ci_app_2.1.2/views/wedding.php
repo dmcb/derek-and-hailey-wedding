@@ -4,8 +4,8 @@
   		<div class="wrapper">
   			<div class="box">
 				<h2>The Wedding</h2>
-				<span><a href="#itinerary">Itinerary</a> &bull; <a href="#rsvp">RSVP</a><!-- &bull; <a href="#registry">Registry</a>--></span>
-				<span><a href="#where_to_stay">Where To Stay</a> &bull; <a href="#about_calgary">About Calgary</a></span>
+				<span><a href="#itinerary">Itinerary</a> &bull; <a href="#rsvp">RSVP</a></span>
+				<span><a href="#where_to_stay">Where To Stay</a> &bull; <a href="#about_calgary">About Calgary</a> &bull; <a href="#registry">Registry</a></span>
 			</div>
 			<img src="<?php echo base_url();?>assets/images/photo_1.png" alt="" class="rotate" />
   		</div>
@@ -17,14 +17,14 @@
 				<h3><img src="<?php echo base_url();?>assets/images/itinerary.png" alt="Itinerary" /></h3>
 				<p>The wedding ceremony and reception will be held on Sunday, February 17th, 2013. All other details will be announced soon.</p>
 			</div>
-			<div class="divider"><span class="highlight">&bull;</span>&bull;&bull;</div>
+			<div class="divider"><span class="highlight">&bull;</span>&bull;&bull;&bull;</div>
 <?php echo $rsvp; ?>
-			<div class="divider">&bull;<span class="highlight">&bull;</span>&bull;</div>
+			<div class="divider">&bull;<span class="highlight">&bull;</span>&bull;&bull;</div>
 			<div class="section" id="where_to_stay">
-				<h3><a id="where_to_stay"><img src="<?php echo base_url();?>assets/images/where_to_stay.png" alt="Where To Stay" /></a></h3>
+				<h3><img src="<?php echo base_url();?>assets/images/where_to_stay.png" alt="Where To Stay" /></h3>
 				<p>Coming soon.</p>
 			</div>
-			<div class="divider">&bull;&bull;<span class="highlight">&bull;</span></div>
+			<div class="divider">&bull;&bull;<span class="highlight">&bull;</span>&bull;</div>
 			<div class="section" id="about_calgary">
 				<h3><img src="<?php echo base_url();?>assets/images/about_calgary.png" alt="About Calgary" /></h3>
 				<p>We live in <a href="http://en.wikipedia.org/wiki/Calgary">Calgary, Alberta</a> and we couldn't think of a better place to bring our family and friends for our wedding than our home. Some of you will already know what Calgary is like in February but for those of you that don't, we will break the news: it's cold. But the Canadian winter, as chilly as it may be, is beautiful, so please remember: there is no bad weather, only bad clothes!</p>
@@ -68,6 +68,23 @@
 						<li>Snowshoeing and cross-country skiing in <a href="http://tpr.alberta.ca/parks/fishcreek/winterrecreat.asp">Fish Creek Provincial Park</a>, or all that and dog sledding in nearby <a href="http://www.tourismcanmore.com/activities/winter-activities/">Canmore</a></li>
 					</ul>
 				</div>
+			</div>
+			<div class="divider">&bull;&bull;&bull;<span class="highlight">&bull;</span></div>
+			<div class="section" id="registry">
+				<h3><img src="<?php echo base_url();?>assets/images/registry.png" alt="Registry" /></h3>
+				<p>We are grateful to have so many wonderful people in our lives. Having you with us as we start this new chapter together is the best present we could ask for. For those that can not attend, we welcome your blessings from afar.</p>
+				<p>For anyone who would like to help us get started, we have everything we could need for our cozy condo and no room to spare. So, we ask you to consider helping make some of our wishes come true:</p>
+				<div class="choices">
+					<a class="picture" href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=943QFJVRNAMUJ">
+						<img src="<?php echo base_url();?>assets/images/honeymoon.png" alt="Honeymoon" class="picture"/>
+						<span>Honeymoon</span>
+					</a>
+					<a class="picture" href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=RVQTD3ZBC88C8">
+						<img src="<?php echo base_url();?>assets/images/home.png" alt="New Home" class="picture"/>
+						<span>New Home</span>
+					</a>
+				</div>
+				<p>We have been blessed with good families, good friends and good jobs. With that we believe comes a responsibility to give back and to make our community better. A portion of your generous gift will be donated to a local charity, <a href="http://www.theseed.ca/The-Mustard-Seed-Calgary.html">The Mustard Seed</a>, to provide basic services, employment assistance and housing to the less fortunate.</p>
 			</div>
   		</div>
   	</div>

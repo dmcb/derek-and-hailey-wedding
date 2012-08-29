@@ -295,6 +295,44 @@ div.page {
 			}
 		}
 
+		&#registry {
+			.choices {
+				padding-bottom: 32px;
+
+				a.picture {
+					margin-left: 192px;
+					margin-bottom: -8px;
+					text-decoration: none;
+					position: relative;
+					width: 560px;
+					display: block;
+
+					img {
+						width: 160px;
+						height: 102px;
+						vertical-align: middle;
+					}
+
+					span {
+						margin-left: 16px;
+						color: $chocolate;
+					}
+
+					&:hover, &.selected {
+						z-index: 1;
+
+						span {
+							color: $pink-dark;
+						}
+
+						img {
+							@include border($pink-dark);
+						}
+					}
+				}
+			}
+		}
+
 		&#our_family {
 			img.scale {
 				position: absolute;

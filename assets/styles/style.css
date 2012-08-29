@@ -192,6 +192,28 @@ div.page {
       padding: 6px 0; }
     div.page div.section#about_calgary img.rotate {
       position: absolute; }
+    div.page div.section#registry .choices {
+      padding-bottom: 32px; }
+      div.page div.section#registry .choices a.picture {
+        margin-left: 192px;
+        margin-bottom: -8px;
+        text-decoration: none;
+        position: relative;
+        width: 560px;
+        display: block; }
+        div.page div.section#registry .choices a.picture img {
+          width: 160px;
+          height: 102px;
+          vertical-align: middle; }
+        div.page div.section#registry .choices a.picture span {
+          margin-left: 16px;
+          color: #5a3a08; }
+        div.page div.section#registry .choices a.picture:hover, div.page div.section#registry .choices a.picture.selected {
+          z-index: 1; }
+          div.page div.section#registry .choices a.picture:hover span, div.page div.section#registry .choices a.picture.selected span {
+            color: #f37a7a; }
+          div.page div.section#registry .choices a.picture:hover img, div.page div.section#registry .choices a.picture.selected img {
+            border: 8px solid #f37a7a; }
     div.page div.section#our_family img.scale {
       position: absolute; }
     div.page div.section#our_family p {
