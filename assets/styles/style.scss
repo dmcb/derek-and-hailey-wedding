@@ -70,7 +70,7 @@ div.bird {
 
 	&#bird1 {
 		background: url(../images/bird_flight.png) no-repeat 204px 56px;
-		top: 840px;
+		top: 1150px;
 		left: 0;
 	}
 
@@ -226,6 +226,26 @@ div.page {
 
 	div.section {
 		margin-top: $gap;
+
+		&#itinerary {
+			min-height: 620px;
+
+			span.time {
+				font-weight: bold;
+			}
+
+			h4 {
+				width: 560px;
+				margin-left: auto;
+				margin-right: auto;
+			}
+
+			#map {
+				border: 0;
+				position: absolute;
+				right: 16px;
+			}
+		}
 
 		&#rsvp {
 			span {

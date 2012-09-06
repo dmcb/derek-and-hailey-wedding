@@ -36,7 +36,7 @@ div.bird {
   height: 500px; }
   div.bird#bird1 {
     background: url(../images/bird_flight.png) no-repeat 204px 56px;
-    top: 840px;
+    top: 1150px;
     left: 0; }
   div.bird#bird2 {
     background: url(../images/bird_flight_2.png) no-repeat 0px 0px;
@@ -148,6 +148,18 @@ div.page {
     border: none; }
   div.page div.section {
     margin-top: 64px; }
+    div.page div.section#itinerary {
+      min-height: 620px; }
+      div.page div.section#itinerary span.time {
+        font-weight: bold; }
+      div.page div.section#itinerary h4 {
+        width: 560px;
+        margin-left: auto;
+        margin-right: auto; }
+      div.page div.section#itinerary #map {
+        border: 0;
+        position: absolute;
+        right: 16px; }
     div.page div.section#rsvp span {
       width: 368px;
       margin: 0;

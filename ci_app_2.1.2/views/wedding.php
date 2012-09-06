@@ -15,7 +15,16 @@
   		<div class="wrapper">
   			<div class="section" id="itinerary">
 				<h3><img src="<?php echo base_url();?>assets/images/itinerary.png" alt="Itinerary" /></h3>
-				<p>The wedding ceremony and reception will be held on Sunday, February 17th, 2013. All other details will be announced soon.</p>
+				<a href="<?php echo base_url();?>assets/images/map_large.png"><img src="<?php echo base_url();?>assets/images/map.png" alt="Map" id="map" /></a>
+				<h4>Sunday, February 17th, 2013</h4>
+				<p><span class="time">3:00 PM</span> - The Art Gallery of Calgary<br/>
+				117 8 Ave SW<br/>
+				Wedding ceremony.</p>
+				<p><span class="time">6:00 PM</span> - Alloy<br/>
+				220 42 Ave SE<br/>
+				Cocktails and hors d'oeuvres.</p>
+				<p><span class="time">7:00 PM</span><br/>
+				Reception dinner + drinks + dancing.</p>
 			</div>
 			<div class="divider"><span class="highlight">&bull;</span>&bull;&bull;&bull;</div>
 <?php echo $rsvp; ?>

@@ -7,7 +7,7 @@ $(document).ready(function(){
 	if ($('#bird1').length != 0) {
 		scrollorama.animate('#bird1',
 		{
-			delay:50,
+			delay:400,
 			duration:1200,
 			property:'background-position-x',
 			start:-129,
