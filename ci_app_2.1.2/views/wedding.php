@@ -94,7 +94,7 @@
 						<li><a href="http://www.calgary.ca/CSPS/Parks/Pages/Locations/Downtown-parks/Olympic-Plaza.aspx">Skating at Olympic Plaza</a></li>
 						<li><a href="http://uptown17.ca/">Shopping on 17th Avenue</a> and grab some tea where <a href="http://www.urbanspoon.com/r/15/1437650/restaurant/Uptown-17th-Ave/Steeps-the-Urban-Teahouse-Calgary">Derek and Hailey first met!</a></li>
 						<li>Downhill skiing & boarding for beginners in the city at <a href="http://www.winsportcanada.ca/cop/index_cop.cfm">Canada Olympic Park</a>, or for more comfortable carvers at <a href="http://www.skibanff.com/">Sunshine Village</a> and <a href="http://www.skilouise.com/">Lake Louise Mountain Resort</a></li>
-						<li>Snowshoeing and cross-country skiing in <a href="http://tpr.alberta.ca/parks/fishcreek/winterrecreat.asp">Fish Creek Provincial Park</a>, or all that and dog sledding in nearby <a href="http://www.tourismcanmore.com/activities/winter-activities/">Canmore</a></li>
+						<li>Snowshoeing and cross-country skiing in <a href="http://www.albertaparks.ca/fish-creek.aspx">Fish Creek Provincial Park</a>, or all that and dog sledding in nearby <a href="http://tourismcanmore.com/things-to-do/winter-activities">Canmore</a></li>
 					</ul>
 				</div>
 			</div>
