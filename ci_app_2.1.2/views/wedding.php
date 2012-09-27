@@ -31,7 +31,27 @@
 			<div class="divider">&bull;<span class="highlight">&bull;</span>&bull;&bull;</div>
 			<div class="section" id="where_to_stay">
 				<h3><img src="<?php echo base_url();?>assets/images/where_to_stay.png" alt="Where To Stay" /></h3>
-				<p>Coming soon.</p>
+				<p>
+					We've blocked off a set of rooms from Friday night through Monday morning at the hotels below based on proximity to our various locations. When booking either online or by phone, please reference the Pinto/McBurney wedding for the rates listed below.
+				</p>
+				<p>
+					<a href="http://ramadacalgary.com/">
+						Ramada Downtown Calgary<br/>
+						708 8th Ave SW<br/>
+					</a>
+					900 m (11 min) walk from the Art Gallery of Calgary<br/>
+					Rate: $105/night<br/>
+					1-800-661-8684<br/>
+				</p>
+				<p>
+					<a href="http://www.hihotelcalgary.ca/">
+						Holiday Inn<br/>
+						708 8th Ave SW<br/>
+					</a>
+					300 m (5 min) from Alloy<br/>
+					Rate: $119/night<br/>
+					1-866-554-0162<br/>
+				</p>				
 			</div>
 			<div class="divider">&bull;&bull;<span class="highlight">&bull;</span>&bull;</div>
 			<div class="section" id="about_calgary">
