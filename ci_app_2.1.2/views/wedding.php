@@ -45,8 +45,8 @@
 				</p>
 				<p>
 					<a href="http://www.hihotelcalgary.ca/">
-						Holiday Inn<br/>
-						708 8th Ave SW<br/>
+						Holiday Inn Calgary-Macleod Trail South<br/>
+						4206 Macleod Trail S<br/>
 					</a>
 					300 m (5 min) from Alloy<br/>
 					Rate: $119/night<br/>
