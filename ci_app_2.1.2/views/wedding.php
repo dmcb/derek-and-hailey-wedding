@@ -51,7 +51,10 @@
 					300 m (5 min) from Alloy<br/>
 					Rate: $119/night<br/>
 					1-866-554-0162<br/>
-				</p>				
+				</p>
+				<p>
+					To be eligible for the rates above, please book by January 14, 2013.
+				</p>
 			</div>
 			<div class="divider">&bull;&bull;<span class="highlight">&bull;</span>&bull;</div>
 			<div class="section" id="about_calgary">
