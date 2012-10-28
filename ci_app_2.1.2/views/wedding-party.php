@@ -7,7 +7,7 @@
 				<span><a href="#our_family">Our Family</a></span>
 				<span><a href="#the_girls">The Girls</a> &bull; <a href="#the_boys">The Boys</a></span>
 			</div>
-			<img src="assets/images/photo_2.png" alt="" class="rotate" />
+			<img src="assets/images/photo_2.jpg" alt="" class="rotate" />
   		</div>
   	</div>
 
@@ -17,12 +17,12 @@
 				<h3><img src="assets/images/our_family.png" alt="Our Family" /></h3>
 
 				<div class="triple left">
-					<img src="assets/images/pintos_2.png" style="width: 304px; height: 228px; top: 247px; left: 40px;" alt="" class="scale" id="pintos2" />
+					<img src="assets/images/pintos_2.jpg" style="width: 304px; height: 228px; top: 247px; left: 40px;" alt="" class="scale" id="pintos2" />
 					<img src="assets/images/pintos_3.png" style="width: 198px; height: 168px; top: 36px;" alt="" class="scale" id="pintos3" />
-					<img src="assets/images/pintos_1.png" style="width: 392px; height: 278px; left: 153px;" alt="" class="scale" id="pintos1" />
+					<img src="assets/images/pintos_1.jpg" style="width: 392px; height: 278px; left: 153px;" alt="" class="scale" id="pintos1" />
 					<img src="assets/images/mcburneys_3.png" style="width: 145px; height: 193px; top: 286px; left: 368px;" alt="" class="scale" id="mcburneys3" />
-					<img src="assets/images/mcburneys_1.png" style="width: 317px; height: 224px; top: 511px;" alt="" class="scale" id="mcburneys1" />
-					<img src="assets/images/mcburneys_2.png" style="width: 253px; height: 342px; top: 443px; left: 291px;" alt="" class="scale" id="mcburneys2" />
+					<img src="assets/images/mcburneys_1.jpg" style="width: 317px; height: 224px; top: 511px;" alt="" class="scale" id="mcburneys1" />
+					<img src="assets/images/mcburneys_2.jpg" style="width: 253px; height: 342px; top: 443px; left: 291px;" alt="" class="scale" id="mcburneys2" />
 				</div>
 
 				<div class="double right">

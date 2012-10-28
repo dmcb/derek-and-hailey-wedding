@@ -7,7 +7,7 @@
 				<span><a href="#itinerary">Itinerary</a> &bull; <a href="#rsvp">RSVP</a></span>
 				<span><a href="#where_to_stay">Where To Stay</a> &bull; <a href="#about_calgary">About Calgary</a> &bull; <a href="#registry">Registry</a></span>
 			</div>
-			<img src="<?php echo base_url();?>assets/images/photo_1.png" alt="" class="rotate" />
+			<img src="<?php echo base_url();?>assets/images/photo_1.jpg" alt="" class="rotate" />
   		</div>
   	</div>
 
@@ -63,9 +63,9 @@
 				<p>We've recommended our favourite things to eat, see and do in and around Calgary in February. Have a wonderful time!</p>
 
 				<div class="triple left">
-					<img src="<?php echo base_url();?>assets/images/calgary.png" style="left: 192px;" alt="" class="rotate" id="calgary1" />
+					<img src="<?php echo base_url();?>assets/images/calgary.jpg" style="left: 192px;" alt="" class="rotate" id="calgary1" />
 					<img src="<?php echo base_url();?>assets/images/calgary_peace_bridge.png" style="top: 184px;" alt="" class="rotate" id="calgary2" />
-					<img src="<?php echo base_url();?>assets/images/calgary_aurora.png" style="top: 312px; left: 104px;" alt="" class="rotate" id="calgary3" />
+					<img src="<?php echo base_url();?>assets/images/calgary_aurora.jpg" style="top: 312px; left: 104px;" alt="" class="rotate" id="calgary3" />
 				</div>
 
 				<div class="double right">
