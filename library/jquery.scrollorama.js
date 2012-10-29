@@ -10,6 +10,7 @@
 		var scrollorama = this,
 			blocks = [],
 			browserPrefix = '',
+			ieVersion = '',
 			onBlockChange = function() {},
 			latestKnownScrollY = 0,
             ticking = false,
@@ -30,22 +31,26 @@
 		
 		// PRIVATE FUNCTIONS
 		function init() {
-			var i, block, didScroll = false;
+			var i, block, didScroll, marginTop = false;
 			if (typeof scrollorama.settings.blocks === 'string') { scrollorama.settings.blocks = $(scrollorama.settings.blocks); }
 			
 			// set browser prefix
 			if ($.browser.mozilla) { browserPrefix = '-moz-'; }
 			if ($.browser.webkit) { browserPrefix = '-webkit-'; }
 			if ($.browser.opera) { browserPrefix = '-o-'; }
-			if ($.browser.msie) { browserPrefix = '-ms-'; }
+			if ($.browser.msie) { 
+				browserPrefix = '-ms-'; 
+				ieVersion = parseInt($.browser.version, 10);
+			}
 			
 			// create blocks array to contain animation props
 			$('body').css('position','relative');
 			for (i=0; i<scrollorama.settings.blocks.length; i++) {
 				block = scrollorama.settings.blocks.eq(i);
+				marginTop = block.css('margin-top');
 				blocks.push({
 					block: block,
-					top: block.offset().top - parseInt(block.css('margin-top'), 10),
+					top: block.offset().top - (!Boolean(marginTop) ? parseInt(marginTop, 10) : 0),
 					pin: 0,
 					animations:[]
 				});
@@ -64,7 +69,7 @@
 			
 			latestKnownScrollY = 0;
             ticking = false;
-            $(window).scroll( onScroll );
+            $(window).on( 'scroll.scrollorama', onScroll );
 		}
 
 		function onScroll() {
@@ -281,6 +286,16 @@
 					if (anim.end === undefined) { anim.end = 1; }
 				}
 				
+				// convert background-position property for use on IE8 and lower
+				if (ieVersion && ieVersion < 9 && (anim.property == 'background-position-x' || anim.property == 'background-position-y')) {
+					if (anim.property === 'background-position-x') {
+						anim.property = 'backgroundPositionX';
+					}
+					else {
+						anim.property = 'backgroundPositionY';
+					}
+				}
+				
 				if (anim.baseline === undefined) {
 					if (anim.pin || targetBlock.pin || targetIndex === 0) {
 						anim.baseline = 'top';
@@ -341,6 +356,30 @@
 			// make sure scrollpoints are in numeric order
 			scrollpoints.sort(function(a,b) {return a - b;});
 			return scrollpoints;
+		};
+		
+		// Remove scrollorama
+		scrollorama.destroy = function () {
+			// Remove animations
+			for (i=0; i<blocks.length; i++) {
+				// Remove CSS rules
+				blocks[i].block.css({
+					top: '',
+					position: ''
+				});
+				
+				// Remove scrolloroma-specific attributes
+				delete blocks[i].animations;
+				delete blocks[i].top;
+				delete blocks[i].pin;
+			}
+
+			// Unbind the window scroll event
+			$(window).off('scroll.scrollorama');
+			$('#scroll-wrap').remove();
+			
+			// Remove the scrolloroma object
+			delete scrollorama;
 		};
 		
 		
