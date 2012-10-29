@@ -5,5 +5,5 @@ This is the code behind my wedding website, [derekandhailey.com](http://derekand
 [Derek McBurney](http://dmcbdesign.com)
 
 ## License
-This code may not be used commercially without the written consent of
+This code cannot be used commercially without the written consent of
 Derek McBurney. **Non-commercial use requires attribution.**
