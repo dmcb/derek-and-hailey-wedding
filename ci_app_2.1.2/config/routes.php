@@ -38,7 +38,7 @@
 |
 */
 
-$route['wedding|wedding-party|tweets'] = "pages";
+$route['wedding|wedding-party|photos|tweets'] = "pages";
 $route['default_controller'] = "pages";
 $route['404_override'] = '';
 

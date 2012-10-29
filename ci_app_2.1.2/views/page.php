@@ -41,10 +41,9 @@
 					</a>
 				</li>
 				<li>
-					<a <?php if ($uri_segments[sizeof($uri_segments)-1] == "photos") echo 'class="selected"';?>>
-						<span class="title">Photos + Blog</span>
-						<!--<span class="description">See our story and help us tell it</span>-->
-						<span class="description">Coming soon...</span>
+					<a href="photos" <?php if ($uri_segments[sizeof($uri_segments)-1] == "photos") echo 'class="selected"';?>>
+						<span class="title">Photos</span>
+						<span class="description">See our story and help us tell it</span>
 					</a>
 				</li>
 			</ul>
@@ -69,7 +68,7 @@
 				</a>
 
 				<div class="menu">
-					<a href="./">the wedding</a> &bull; <a href="wedding-party">the wedding party</a> &bull; <a>photos + blog</a>
+					<a href="./">the wedding</a> &bull; <a href="wedding-party">the wedding party</a> &bull; <a href="photos">photos</a>
 					<a class="watermark" href="http://dmcbdesign.com"><img src="<?php echo base_url();?>assets/images/watermark.png" alt="Made with love by dmcb design" /></a>
 				</div>
 			</div>
