@@ -41,7 +41,7 @@
 				</div>
 			</div>
 			<div class="divider"><span class="highlight">&bull;</span></div>
-			<div class="section">
+			<div class="section" id="the_girls_and_the_boys">
 				<h3><img src="assets/images/the_girls_and_the_boys.png" alt="The Girls &amp; The Boys" /></h3>
 				<div class="wedding_party">
 					<h4 id="the_girls">The Girls</h4>

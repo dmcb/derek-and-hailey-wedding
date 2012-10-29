@@ -1,6 +1,6 @@
   	<div class="page">
   		<div class="wrapper">
-  			<div class="section">
+  			<div class="section" id="tweets">
 				<script charset="utf-8" src="http://widgets.twimg.com/j/2/widget.js"></script>
 				<div class="twitter_box half" id="derek_tweets">
 					<script>
