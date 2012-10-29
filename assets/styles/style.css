@@ -147,7 +147,14 @@ div.page {
   div.page img.no_border {
     border: none; }
   div.page div.section {
-    margin-top: 64px; }
+    margin-top: 64px;
+    position: relative; }
+    div.page div.section:after {
+      content: ".";
+      display: block;
+      height: 0;
+      clear: both;
+      visibility: hidden; }
     div.page div.section#itinerary {
       min-height: 620px; }
       div.page div.section#itinerary span.time {
@@ -159,7 +166,7 @@ div.page {
       div.page div.section#itinerary #map {
         border: 0;
         position: absolute;
-        right: 16px; }
+        right: 0; }
     div.page div.section#rsvp span {
       width: 368px;
       margin: 0;
@@ -235,6 +242,85 @@ div.page {
     div.page div.section#our_family div.double {
       margin-top: 128px;
       z-index: -1; }
+    div.page div.section#the_girls_and_the_boys div.wedding_party {
+      width: 368px;
+      height: 1039px;
+      float: left; }
+      div.page div.section#the_girls_and_the_boys div.wedding_party h4 {
+        margin-top: 8px; }
+      div.page div.section#the_girls_and_the_boys div.wedding_party div.divider {
+        clear: both;
+        padding-top: 33px; }
+      div.page div.section#the_girls_and_the_boys div.wedding_party a.person {
+        cursor: pointer;
+        position: relative;
+        margin-bottom: -8px;
+        text-decoration: none;
+        float: left;
+        width: 368px; }
+        div.page div.section#the_girls_and_the_boys div.wedding_party a.person img {
+          width: 160px;
+          height: 102px;
+          vertical-align: middle; }
+        div.page div.section#the_girls_and_the_boys div.wedding_party a.person span {
+          margin-left: 16px;
+          color: #5a3a08; }
+        div.page div.section#the_girls_and_the_boys div.wedding_party a.person:hover, div.page div.section#the_girls_and_the_boys div.wedding_party a.person.selected {
+          z-index: 1; }
+          div.page div.section#the_girls_and_the_boys div.wedding_party a.person:hover span, div.page div.section#the_girls_and_the_boys div.wedding_party a.person.selected span {
+            color: #f37a7a; }
+          div.page div.section#the_girls_and_the_boys div.wedding_party a.person:hover img, div.page div.section#the_girls_and_the_boys div.wedding_party a.person.selected img {
+            border: 8px solid #f37a7a; }
+    div.page div.section#the_girls_and_the_boys div.mad_lib {
+      background-image: url(../images/mad_lib.png);
+      width: 590px;
+      height: 1039px;
+      position: absolute;
+      right: 0;
+      z-index: -1; }
+      div.page div.section#the_girls_and_the_boys div.mad_lib div.overlay {
+        position: absolute;
+        background-repeat: no-repeat;
+        background-position: 36px 54px;
+        width: 590px;
+        height: 1039px;
+        display: none; }
+        div.page div.section#the_girls_and_the_boys div.mad_lib div.overlay#bonnie_overlay {
+          background-image: url(../images/mad_lib_bonnie.png); }
+        div.page div.section#the_girls_and_the_boys div.mad_lib div.overlay#lorraine_overlay {
+          background-image: url(../images/mad_lib_lorraine.png); }
+        div.page div.section#the_girls_and_the_boys div.mad_lib div.overlay#lori_overlay {
+          background-image: url(../images/mad_lib_lori.png); }
+        div.page div.section#the_girls_and_the_boys div.mad_lib div.overlay#glyn_overlay {
+          background-image: url(../images/mad_lib_glyn.png); }
+        div.page div.section#the_girls_and_the_boys div.mad_lib div.overlay#cam_overlay {
+          background-image: url(../images/mad_lib_cam.png); }
+        div.page div.section#the_girls_and_the_boys div.mad_lib div.overlay#serge_overlay {
+          background-image: url(../images/mad_lib_serge.png); }
+        div.page div.section#the_girls_and_the_boys div.mad_lib div.overlay#kyle_overlay {
+          background-image: url(../images/mad_lib_kyle.png); }
+        div.page div.section#the_girls_and_the_boys div.mad_lib div.overlay#jason_overlay {
+          background-image: url(../images/mad_lib_jason.png); }
+        div.page div.section#the_girls_and_the_boys div.mad_lib div.overlay.selected {
+          display: inline; }
+    div.page div.section#photos {
+      height: 2364px; }
+      div.page div.section#photos img.scale {
+        position: absolute; }
+    div.page div.section#tweets div.twitter_box {
+      float: left;
+      margin-right: 16px;
+      margin-top: 130px; }
+    div.page div.section#tweets div.twitter_picture {
+      background-image: url(../images/thought_bubbles.png);
+      background-position: 260px -30px;
+      background-repeat: no-repeat;
+      height: 620px;
+      clear: both; }
+      div.page div.section#tweets div.twitter_picture img {
+        position: absolute;
+        clear: both;
+        bottom: 0; }
   div.page div.divider + div.section {
     margin: 32px 0; }
   div.page div.divider {
@@ -246,81 +332,6 @@ div.page {
     clear: both; }
     div.page div.divider span.highlight {
       color: #dbcbb0; }
-  div.page div.wedding_party {
-    width: 368px;
-    height: 1039px;
-    float: left; }
-    div.page div.wedding_party h4 {
-      margin-top: 8px; }
-    div.page div.wedding_party div.divider {
-      clear: both;
-      padding-top: 33px; }
-    div.page div.wedding_party a.person {
-      cursor: pointer;
-      position: relative;
-      margin-bottom: -8px;
-      text-decoration: none;
-      float: left;
-      width: 368px; }
-      div.page div.wedding_party a.person img {
-        width: 160px;
-        height: 102px;
-        vertical-align: middle; }
-      div.page div.wedding_party a.person span {
-        margin-left: 16px;
-        color: #5a3a08; }
-      div.page div.wedding_party a.person:hover, div.page div.wedding_party a.person.selected {
-        z-index: 1; }
-        div.page div.wedding_party a.person:hover span, div.page div.wedding_party a.person.selected span {
-          color: #f37a7a; }
-        div.page div.wedding_party a.person:hover img, div.page div.wedding_party a.person.selected img {
-          border: 8px solid #f37a7a; }
-  div.page div.mad_lib {
-    background-image: url(../images/mad_lib.png);
-    width: 590px;
-    height: 1039px;
-    position: absolute;
-    right: 0;
-    z-index: -1; }
-    div.page div.mad_lib div.overlay {
-      position: absolute;
-      background-repeat: no-repeat;
-      background-position: 36px 54px;
-      width: 590px;
-      height: 1039px;
-      display: none; }
-      div.page div.mad_lib div.overlay#bonnie_overlay {
-        background-image: url(../images/mad_lib_bonnie.png); }
-      div.page div.mad_lib div.overlay#lorraine_overlay {
-        background-image: url(../images/mad_lib_lorraine.png); }
-      div.page div.mad_lib div.overlay#lori_overlay {
-        background-image: url(../images/mad_lib_lori.png); }
-      div.page div.mad_lib div.overlay#glyn_overlay {
-        background-image: url(../images/mad_lib_glyn.png); }
-      div.page div.mad_lib div.overlay#cam_overlay {
-        background-image: url(../images/mad_lib_cam.png); }
-      div.page div.mad_lib div.overlay#serge_overlay {
-        background-image: url(../images/mad_lib_serge.png); }
-      div.page div.mad_lib div.overlay#kyle_overlay {
-        background-image: url(../images/mad_lib_kyle.png); }
-      div.page div.mad_lib div.overlay#jason_overlay {
-        background-image: url(../images/mad_lib_jason.png); }
-      div.page div.mad_lib div.overlay.selected {
-        display: inline; }
-  div.page div.twitter_box {
-    float: left;
-    margin-right: 16px;
-    margin-top: 130px; }
-  div.page div.twitter_picture {
-    background-image: url(../images/thought_bubbles.png);
-    background-position: 260px -30px;
-    background-repeat: no-repeat;
-    height: 620px;
-    clear: both; }
-    div.page div.twitter_picture img {
-      position: absolute;
-      clear: both;
-      bottom: 0; }
 
 div.padding {
   float: left;

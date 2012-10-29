@@ -226,6 +226,15 @@ div.page {
 
 	div.section {
 		margin-top: $gap;
+		position: relative;
+		
+		&:after {
+		    content: ".";
+		    display: block;
+		    height: 0;
+		    clear: both;
+		    visibility: hidden;
+		}
 
 		&#itinerary {
 			min-height: 620px;
@@ -243,7 +252,7 @@ div.page {
 			#map {
 				border: 0;
 				position: absolute;
-				right: 16px;
+				right: 0;
 			}
 		}
 
@@ -371,6 +380,132 @@ div.page {
 				z-index: -1;
 			}
 		}
+		
+		&#the_girls_and_the_boys {
+			div.wedding_party {
+				width: 368px;
+				height: 1039px;
+				float: left;
+		
+				h4 {
+					margin-top: 8px;
+				}
+		
+				div.divider {
+					clear: both;
+					padding-top: 33px;
+				}
+		
+				a.person {
+					cursor: pointer;
+					position: relative;
+					margin-bottom: -8px;
+					text-decoration: none;
+					float: left;
+					width: 368px;
+		
+					img {
+						width: 160px;
+						height: 102px;
+						vertical-align: middle;
+					}
+		
+					span {
+						margin-left: 16px;
+						color: $chocolate;
+					}
+		
+					&:hover, &.selected {
+						z-index: 1;
+		
+						span {
+							color: $pink-dark;
+						}
+		
+						img {
+							@include border($pink-dark);
+						}
+					}
+				}
+			}
+		
+			div.mad_lib {
+				background-image: url(../images/mad_lib.png);
+				width: 590px;
+				height: 1039px;
+				position: absolute;
+				right: 0;
+				z-index: -1;
+		
+				div.overlay {
+					position: absolute;
+					background-repeat: no-repeat;
+					background-position: 36px 54px;
+					width: 590px;
+					height: 1039px;
+					display: none;
+		
+					&#bonnie_overlay {
+						background-image: url(../images/mad_lib_bonnie.png);
+					}
+					&#lorraine_overlay {
+						background-image: url(../images/mad_lib_lorraine.png);
+					}
+					&#lori_overlay {
+						background-image: url(../images/mad_lib_lori.png);
+					}
+					&#glyn_overlay {
+						background-image: url(../images/mad_lib_glyn.png);
+					}
+					&#cam_overlay {
+						background-image: url(../images/mad_lib_cam.png);
+					}
+					&#serge_overlay {
+						background-image: url(../images/mad_lib_serge.png);
+					}
+					&#kyle_overlay {
+						background-image: url(../images/mad_lib_kyle.png);
+					}
+					&#jason_overlay {
+						background-image: url(../images/mad_lib_jason.png);
+					}
+		
+					&.selected {
+						display: inline;
+					}
+				}
+			}
+		}
+		
+		&#photos {
+			height: 2256px + 108px;
+		
+			img.scale {
+				position: absolute;
+			}
+		}
+		
+		&#tweets {
+			div.twitter_box {
+				float: left;
+				margin-right: 16px;
+				margin-top: 130px;
+			}
+		
+			div.twitter_picture {
+				background-image: url(../images/thought_bubbles.png);
+				background-position: 260px -30px;
+				background-repeat: no-repeat;
+				height: 620px;
+				clear: both;
+		
+				img {
+					position: absolute;
+					clear: both;
+					bottom: 0;
+				}
+			}
+		}
 	}
 
 	div.divider + div.section {
@@ -390,119 +525,6 @@ div.page {
 		}
 	}
 
-	div.wedding_party {
-		width: 368px;
-		height: 1039px;
-		float: left;
-
-		h4 {
-			margin-top: 8px;
-		}
-
-		div.divider {
-			clear: both;
-			padding-top: 33px;
-		}
-
-		a.person {
-			cursor: pointer;
-			position: relative;
-			margin-bottom: -8px;
-			text-decoration: none;
-			float: left;
-			width: 368px;
-
-			img {
-				width: 160px;
-				height: 102px;
-				vertical-align: middle;
-			}
-
-			span {
-				margin-left: 16px;
-				color: $chocolate;
-			}
-
-			&:hover, &.selected {
-				z-index: 1;
-
-				span {
-					color: $pink-dark;
-				}
-
-				img {
-					@include border($pink-dark);
-				}
-			}
-		}
-	}
-
-	div.mad_lib {
-		background-image: url(../images/mad_lib.png);
-		width: 590px;
-		height: 1039px;
-		position: absolute;
-		right: 0;
-		z-index: -1;
-
-		div.overlay {
-			position: absolute;
-			background-repeat: no-repeat;
-			background-position: 36px 54px;
-			width: 590px;
-			height: 1039px;
-			display: none;
-
-			&#bonnie_overlay {
-				background-image: url(../images/mad_lib_bonnie.png);
-			}
-			&#lorraine_overlay {
-				background-image: url(../images/mad_lib_lorraine.png);
-			}
-			&#lori_overlay {
-				background-image: url(../images/mad_lib_lori.png);
-			}
-			&#glyn_overlay {
-				background-image: url(../images/mad_lib_glyn.png);
-			}
-			&#cam_overlay {
-				background-image: url(../images/mad_lib_cam.png);
-			}
-			&#serge_overlay {
-				background-image: url(../images/mad_lib_serge.png);
-			}
-			&#kyle_overlay {
-				background-image: url(../images/mad_lib_kyle.png);
-			}
-			&#jason_overlay {
-				background-image: url(../images/mad_lib_jason.png);
-			}
-
-			&.selected {
-				display: inline;
-			}
-		}
-	}
-
-	div.twitter_box {
-		float: left;
-		margin-right: 16px;
-		margin-top: 130px;
-	}
-
-	div.twitter_picture {
-		background-image: url(../images/thought_bubbles.png);
-		background-position: 260px -30px;
-		background-repeat: no-repeat;
-		height: 620px;
-		clear: both;
-
-		img {
-			position: absolute;
-			clear: both;
-			bottom: 0;
-		}
-	}
 }
 
 div.padding {
