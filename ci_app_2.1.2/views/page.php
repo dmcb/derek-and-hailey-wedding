@@ -8,6 +8,9 @@
 	<meta name="author" content="Derek McBurney" />
 
     <title>The Wedding | Derek &amp; Hailey</title>
+    
+	<script type="text/javascript" src="//use.typekit.net/bup1peb.js"></script>
+	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 
     <style type="text/css">@import "<?php echo base_url();?>assets/styles/style.css";</style>
 
