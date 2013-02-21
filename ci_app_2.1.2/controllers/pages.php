@@ -5,6 +5,17 @@ class Pages extends CI_Controller {
 	public function index()
 	{
 		$data = array();
+		
+		// Add splash if it's a first visit
+		if ($this->session->flashdata('splashed')) 
+		{
+			$this->session->keep_flashdata('splashed');
+		}
+		else 
+		{
+			$data['splash'] = $this->load->view('splash', NULL, TRUE);
+			$this->session->set_flashdata('splashed', 'TRUE');
+		}
 
 		$page = "wedding";
 		if ($this->uri->segment(1))

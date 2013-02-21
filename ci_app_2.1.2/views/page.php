@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE HTML>
 <html>
   <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -33,6 +33,9 @@
   </head>
 
   <body class="scrollblock">
+
+<?php if (isset($splash)) echo $splash; ?>
+  
   	<div class="background"></div>
 
   	<div class="title">
@@ -66,7 +69,7 @@
 		</div>
   	</div>
 
-  <?php if (isset($content)) echo $content; ?>
+<?php if (isset($content)) echo $content; ?>
 
   	<div class="padding">&nbsp;</div>
 
@@ -92,9 +95,11 @@
   	</div>
 
   	<!-- scripts -->
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
-    <script src="<?php echo base_url();?>library/jquery.timers-1.1.2.js"></script>
-    <script src="<?php echo base_url();?>library/jquery.scrollorama.js"></script>
-    <script src="<?php echo base_url();?>assets/scripts/script.js"></script>
+  	<script type="text/javascript" src="<?php echo base_url();?>library/json2.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+    <script type="text/javascript" src="<?php echo base_url();?>library/jquery.timers-1.1.2.js"></script>
+    <script type="text/javascript" src="<?php echo base_url();?>library/jquery.scrollorama.js"></script>
+    <script type="text/javascript" src="<?php echo base_url();?>assets/scripts/script.js"></script>
+    <script type="text/javascript" src="//api.filepicker.io/v1/filepicker.js"></script>
   </body>
 </html>

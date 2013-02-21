@@ -1,0 +1,20 @@
+div#post_wedding_splash {
+	display: block;
+	
+	.left_column {
+		float: left;
+	}
+	
+	.right_column {
+		float: left;
+		
+		h1 {
+			margin-top: 30%;
+			line-height: 2;
+		}
+	}
+}
+
+div.title hr {
+	margin-top: 8px;
+}

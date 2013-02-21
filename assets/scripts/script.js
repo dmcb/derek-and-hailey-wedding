@@ -140,5 +140,26 @@ $(document).ready(function(){
 			$('.overlay#' + id + '_overlay').addClass('selected');
 		}
 	});
+	
+	// Entering the site from the 'Thank You' splash
+	$('#close').click(function() {
+		$('#post_wedding_splash').removeClass('visible');
+	});
 });
+
+function openFilePicker() {
+	filepicker.setKey('AXQXEeByyRd2asZZLQzA0z');
+	filepicker.pickMultiple({
+			mimetypes: ['image/*'],
+			container: 'modal',
+			services:['COMPUTER', 'FACEBOOK', 'DROPBOX', 'FLICKR', 'INSTAGRAM']
+		},
+		function(FPFile){
+			console.log(JSON.stringify(FPFile));
+		},
+		function(FPError){
+			console.log(FPError.toString());
+		}
+	);
+}
 
