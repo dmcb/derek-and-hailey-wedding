@@ -7,14 +7,14 @@ class Pages extends CI_Controller {
 		$data = array();
 		
 		// Add splash if it's a first visit
-		if ($this->session->flashdata('splashed')) 
+		if ($this->session->flashdata('splashed') && $this->session->flashdata('splashed') > time()-600) 
 		{
-			$this->session->keep_flashdata('splashed');
+			$this->session->set_flashdata('splashed', time());
 		}
 		else 
 		{
 			$data['splash'] = $this->load->view('splash', NULL, TRUE);
-			$this->session->set_flashdata('splashed', 'TRUE');
+			$this->session->set_flashdata('splashed', time());
 		}
 
 		$page = "wedding";
