@@ -2,7 +2,7 @@
   		<div class="wrapper">
   			<div class="box">
 				<h2>Photos</h2>
-				<span><a href="">Share Your Photos (coming soon)</a></span>
+				<span><a href="#photos">Share Your Photos</a></span>
 				<span><a href="">The Wedding (coming soon)</a> &bull; <a href="#photos">Us</a></span>
 			</div>
 			<img src="assets/images/photo_3.jpg" alt="" class="rotate" />
@@ -13,7 +13,11 @@
   		<div class="wrapper">
   			<div class="section" id="photos">
 	  			<h3><img src="assets/images/photos.png" alt="Photos" /></h3>
-  			
+	  			
+	  			<div style="position: relative;">
+	  				<button class="button" id="filepicker" onclick="openFilePicker()" style="margin-left: 192px; margin-bottom: 64px">Share your photos</button>
+	  			</div>
+	  			
 	  			<div style="position: relative;">
 		  			<img src="<?php echo base_url();?>assets/images/engagement_1.jpg" alt="" style="width: 234px; height: 465px; left: 118px;" class="scale" id="engagement_1"/>
 		  			<img src="<?php echo base_url();?>assets/images/engagement_2.jpg" alt="" style="width: 544px; height: 361px; left: 384px; top: 104px;" class="scale" id="engagement_2"/>
