@@ -48,19 +48,19 @@
 			?>
 
 			<ul class="menu"><li>
-					<a href="./" <?php if ($uri_segments[sizeof($uri_segments)-1] == "") echo 'class="selected"';?>>
+					<a href="<?php echo base_url();?>" <?php if ($uri_segments[sizeof($uri_segments)-1] == "") echo 'class="selected"';?>>
 						<span class="title" >The Wedding</span>
 						<span class="description">Details on the start of our biggest adventure</span>
 					</a>
 				</li>
 				<li>
-					<a href="wedding-party" <?php if ($uri_segments[sizeof($uri_segments)-1] == "wedding-party") echo 'class="selected"';?>>
+					<a href="<?php echo base_url();?>wedding-party" <?php if ($uri_segments[sizeof($uri_segments)-1] == "wedding-party") echo 'class="selected"';?>>
 						<span class="title">The Wedding Party</span>
 						<span class="description">Meet the cast that brought us here</span>
 					</a>
 				</li>
 				<li>
-					<a href="photos" <?php if ($uri_segments[sizeof($uri_segments)-1] == "photos") echo 'class="selected"';?>>
+					<a href="<?php echo base_url();?>photos" <?php if ($uri_segments[sizeof($uri_segments)-1] == "photos") echo 'class="selected"';?>>
 						<span class="title">Photos</span>
 						<span class="description">See our story and help us tell it</span>
 					</a>
@@ -87,7 +87,7 @@
 				</a>
 
 				<div class="menu">
-					<a href="./">the wedding</a> &bull; <a href="wedding-party">the wedding party</a> &bull; <a href="photos">photos</a>
+					<a href="<?php echo base_url();?>">the wedding</a> &bull; <a href="<?php echo base_url();?>wedding-party">the wedding party</a> &bull; <a href="<?php echo base_url();?>photos">photos</a>
 					<a class="watermark" href="http://dmcbdesign.com"><img src="<?php echo base_url();?>assets/images/watermark.png" alt="Made with love by dmcb design" /></a>
 				</div>
 			</div>

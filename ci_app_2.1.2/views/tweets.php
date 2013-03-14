@@ -57,7 +57,7 @@
 								live: true,
 								behavior: 'all'
 							}
-						}).render().setUser('haileypinto').start();
+						}).render().setUser('haileymcb').start();
 					</script>
 				</div>
 				<div class="twitter_picture">

@@ -5,14 +5,14 @@
 				<span><a href="#photos">Share Your Photos</a></span>
 				<span><a href="">The Wedding (coming soon)</a> &bull; <a href="#photos">Us</a></span>
 			</div>
-			<img src="assets/images/photo_3.jpg" alt="" class="rotate" />
+			<img src="<?php echo base_url();?>assets/images/photo_3.jpg" alt="" class="rotate" />
   		</div>
   	</div>
 
   	<div class="page">
   		<div class="wrapper">
   			<div class="section" id="photos">
-	  			<h3><img src="assets/images/photos.png" alt="Photos" /></h3>
+	  			<h3><img src="<?php echo base_url();?>assets/images/photos.png" alt="Photos" /></h3>
 	  			
 	  			<div style="position: relative;">
 	  				<button class="button" id="filepicker" onclick="openFilePicker()" style="margin-left: 192px; margin-bottom: 64px">Share your photos</button>
