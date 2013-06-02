@@ -14,3 +14,6 @@ ci_app_*/logs
 
 # Ignore CSV files
 csv/*
+
+# Ignore Photos
+assets/photos/*

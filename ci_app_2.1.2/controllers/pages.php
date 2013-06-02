@@ -114,6 +114,64 @@ class Pages extends CI_Controller {
 				}
 			}
 		}
+		
+		if ($page == "photos")
+		{
+			$photos = array();
+		
+			# Create json metadata file & thumbnail cache of photos if none exists
+			if (!file_exists("assets/photos/photos.json"))
+			{
+				$this->load->helper('image_resize');
+				$files = scandir('assets/photos/');
+				foreach($files as $file)
+				{
+					$photo = array();
+					
+					if (is_file('assets/photos/'.$file))
+					{
+						$photo['file'] = $file;
+					
+						$size = getimagesize('assets/photos/'.$file, $info);
+						$photo['width'] = $size[0];
+						$photo['height'] = $size[1];
+						
+						# File is a JPEG, let's store its metadata and create a thumbnail
+						if($size[2] == IMAGETYPE_JPEG)
+						{
+							if(!is_dir('assets/photos/thumbnails')) 
+							{
+								mkdir('assets/photos/thumbnails');
+							}
+							
+							image_resize('assets/photos/'.$file, 'assets/photos/thumbnails/'.$file, 130, 130);
+						
+							if(isset($info['APP13']))
+							{
+							    $iptc = iptcparse($info['APP13']);
+							    if (isset($iptc["2#116"]) && isset($iptc["2#116"][0])) {
+									$photo['copyright'] = $iptc["2#116"][0];
+							    }
+							}
+							
+							$photos[] = $photo;
+						}
+					}
+				}
+				
+				function natorder($a,$b) 
+				{ 
+					return strnatcmp ( $a['file'], $b['file'] ); 
+				}
+				uasort($photos, 'natorder');
+				$photos_json = json_encode($photos);
+				file_put_contents('assets/photos/photos.json', $photos_json);
+			}
+			
+			$photos_json = file_get_contents('assets/photos/photos.json');
+			$photos = json_decode($photos_json, true);
+			$data['photos'] = $photos;
+		}
 
 		if ($this->uri->segment(2) == "ajax")
 		{

@@ -551,11 +551,15 @@ div.page {
 			}
 		}
 		
-		&#photos {
-			height: 2256px + 108px + 90px;
+		&#us_photos {
+			height: 2256px + 108px;
 		
 			img.scale {
 				position: absolute;
+			}
+			
+			div {
+				position: relative;
 			}
 		}
 		
@@ -598,7 +602,35 @@ div.page {
 			color: $beige-dark;
 		}
 	}
+}
 
+div.section#wedding_photos {
+	h3 {
+		margin: 0 auto;
+		padding: 0 16px;
+		width: 944px;
+		position: relative;
+		width: 560px;
+		margin-left: auto;
+		margin-right: auto;
+		
+		img {
+			border: none;
+			vertical-align: middle;
+		}
+	}
+
+	img {
+		height: 100px;
+		width: 100px;
+		margin: 4px;
+		padding: 0;
+		@include border;
+	}
+	
+	div {
+		text-align: center;
+	}
 }
 
 div.padding {

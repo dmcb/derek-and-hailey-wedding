@@ -357,10 +357,12 @@ div.page {
           background-image: url(../images/mad_lib_jason.png); }
         div.page div.section#the_girls_and_the_boys div.mad_lib div.overlay.selected {
           display: inline; }
-    div.page div.section#photos {
-      height: 2454px; }
-      div.page div.section#photos img.scale {
+    div.page div.section#us_photos {
+      height: 2364px; }
+      div.page div.section#us_photos img.scale {
         position: absolute; }
+      div.page div.section#us_photos div {
+        position: relative; }
     div.page div.section#tweets div.twitter_box {
       float: left;
       margin-right: 16px;
@@ -386,6 +388,26 @@ div.page {
     clear: both; }
     div.page div.divider span.highlight {
       color: #dbcbb0; }
+
+div.section#wedding_photos h3 {
+  margin: 0 auto;
+  padding: 0 16px;
+  width: 944px;
+  position: relative;
+  width: 560px;
+  margin-left: auto;
+  margin-right: auto; }
+  div.section#wedding_photos h3 img {
+    border: none;
+    vertical-align: middle; }
+div.section#wedding_photos img {
+  height: 100px;
+  width: 100px;
+  margin: 4px;
+  padding: 0;
+  border: 8px solid #dbcbb0; }
+div.section#wedding_photos div {
+  text-align: center; }
 
 div.padding {
   height: 300px;
