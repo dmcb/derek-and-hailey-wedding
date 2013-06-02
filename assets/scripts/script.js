@@ -1,4 +1,7 @@
 $(document).ready(function(){
+	// Start fancyBox
+	$('.fancybox').fancybox();
+
 	// Flying bird effects
 	var scrollorama = $.scrollorama({
 		blocks:'.scrollblock'
@@ -60,7 +63,7 @@ $(document).ready(function(){
 	});
 
 	// RSVP Naming
-	$('#number_attending').live('change', function() {
+	$('#number_attending').on('change', function() {
 		$guests = $(this).val();
 		if ($guests > 0) {
 			$('#names_of_attending').show();
@@ -79,7 +82,7 @@ $(document).ready(function(){
 	});
 
 	// Code submission
-	$('#enter').live('click', function() {
+	$('#enter').on('click', function() {
 		$("#load").show();
 		$('#enter').hide();
 		$.ajax({
@@ -100,7 +103,7 @@ $(document).ready(function(){
 	});
 
 	// RSVP details submission
-	$('#submit').live('click', function() {
+	$('#submit').on('click', function() {
 		$("#load").show();
 		$('#submit').hide();
 		data = "number_attending=" + $('#number_attending').val()

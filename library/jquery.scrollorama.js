@@ -5,6 +5,7 @@
 	Dual licensed under MIT and GPL.
 */
 
+
 (function($) {
     $.scrollorama = function(options) {
 		var scrollorama = this,
@@ -34,13 +35,14 @@
 			var i, block, didScroll, marginTop = false;
 			if (typeof scrollorama.settings.blocks === 'string') { scrollorama.settings.blocks = $(scrollorama.settings.blocks); }
 			
-			// set browser prefix
-			if ($.browser.mozilla) { browserPrefix = '-moz-'; }
-			if ($.browser.webkit) { browserPrefix = '-webkit-'; }
-			if ($.browser.opera) { browserPrefix = '-o-'; }
-			if ($.browser.msie) { 
-				browserPrefix = '-ms-'; 
-				ieVersion = parseInt($.browser.version, 10);
+			// set browser prefix (using getBrowser based on jQuery’s $.browser)
+			var browser = getBrowser();
+			if (browser.mozilla) { browserPrefix = '-moz-'; }
+			if (browser.webkit) { browserPrefix = '-webkit-'; }
+			if (browser.opera) { browserPrefix = '-o-'; }
+			if (browser.msie) {
+				browserPrefix = '-ms-';
+				ieVersion = parseInt(browser.version, 10);
 			}
 			
 			// create blocks array to contain animation props
@@ -65,7 +67,10 @@
 				}
 			}
 			
-			$('body').prepend('<div id="scroll-wrap"></div>');
+			// create scroll-wrap div only once
+			if ($("#scroll-wrap").length === 0) {
+				$('body').prepend('<div id="scroll-wrap"></div>');
+			}
 			
 			latestKnownScrollY = 0;
             ticking = false;
@@ -109,7 +114,7 @@
 						// if above current block, settings should be at start value
 						if (i > currBlockIndex) {
 							if (currBlockIndex !== i-1 && anim.baseline !== 'bottom') {
-								setProperty(anim.element, anim.property, anim.startVal);
+								setProperty(anim, anim.startVal);
 							}
 							if (blocks[i].pin) {
 								blocks[i].block
@@ -121,7 +126,7 @@
 						// if below current block, settings should be at end value
 						// unless on an element that gets animated when it hits the bottom of the viewport
 						else if (i < currBlockIndex) {
-							setProperty(anim.element, anim.property, anim.endVal);
+							setProperty(anim, anim.endVal);
 							if (blocks[i].pin) {
 								blocks[i].block
                                     .css('position', 'absolute')
@@ -145,12 +150,12 @@
 							
 							// if scroll is before start of animation, set to start value
 							if (scrollTop < startAnimPos) {
-								setProperty(anim.element, anim.property, anim.startVal);
+								setProperty(anim, anim.startVal);
 							}
 							
 							// if scroll is after end of animation, set to end value
 							else if (scrollTop > endAnimPos) {
-								setProperty(anim.element, anim.property, anim.endVal);
+								setProperty(anim, anim.endVal);
 								if (blocks[i].pin) {
 									blocks[i].block
                                         .css('position', 'absolute')
@@ -168,7 +173,7 @@
 								}
 								// then multiply the percent by the value range and calculate the new value
 								animVal = anim.startVal + (animPercent * (anim.endVal - anim.startVal));
-								setProperty(anim.element, anim.property, animVal);
+								setProperty(anim, animVal);
 							}
 						}
 					}
@@ -191,7 +196,9 @@
 			return currBlockIndex;
 		}
 		
-		function setProperty(target, prop, val) {
+		function setProperty(anim, val) {
+			var target = anim.element;
+			var prop = anim.property;
 			var scaleCSS, currentPosition;
 			if (prop === 'rotate' || prop === 'zoom' || prop === 'scale') {
 				if (prop === 'rotate') {
@@ -201,7 +208,8 @@
 					if (browserPrefix !== '-ms-') {
 						target.css(browserPrefix+'transform', scaleCSS);
 					} else {
-						target.css('zoom', scaleCSS);
+						if (jQuery().scale) $(target.selector).scale(val);
+						target.css('zoom', val);
 					}
 				}
 			}
@@ -217,7 +225,11 @@
 			else if(prop === 'text-shadow' ) {
 				target.css(prop,'0px 0px '+val+'px #ffffff');
 			} else {
-				target.css(prop, val);
+				if (anim.suffix) {
+					target.css(prop, val + anim.suffix);
+				} else {
+					target.css(prop, val);
+				}
 			}
 		}
 		
@@ -228,6 +240,7 @@
 				targetBlock,
 				anim,
 				offset,
+				suffix,
 				i, j;
 			/*
 				target		= animation target
@@ -306,13 +319,23 @@
 				
 				if (anim.delay === undefined) { anim.delay = 0; }
 				
+				startVal = anim.start !== undefined ? typeof(anim.start) == 'function' ? anim.start() : anim.start : parseInt(target.css(anim.property),10); // if undefined, use current css value
+				endVal = anim.end !== undefined ? typeof(anim.end) == 'function' ? anim.end() : anim.end : parseInt(target.css(anim.property),10); // if undefined, use current css value
+				suffix = startVal.toString().match(/\D+$/) || endVal.toString().match(/\D+$/);
+				if (suffix) {
+					suffix = suffix[0];
+					startVal = parseInt(startVal,10);  // remove the unit so calculations work correctly
+					endVal = parseInt(endVal,10);
+				}
+				
 				targetBlock.animations.push({
 					element: target,
 					delay: anim.delay,
 					duration: anim.duration,
 					property: anim.property,
-					startVal: anim.start !== undefined ? anim.start : parseInt(target.css(anim.property),10),	// if undefined, use current css value
-					endVal: anim.end !== undefined ? anim.end : parseInt(target.css(anim.property),10),			// if undefined, use current css value
+					startVal: startVal,
+					endVal: endVal,
+					suffix: suffix,
 					baseline: anim.baseline !== undefined ? anim.baseline : 'bottom',
 					easing: anim.easing
 				});
@@ -332,6 +355,8 @@
 			}
 			
 			onScrollorama();
+
+			return scrollorama;
 		};
 		
 		// function for passing blockChange event callback
@@ -382,16 +407,12 @@
 			delete scrollorama;
 		};
 		
-		
-		// INIT
 		init();
 		
 		return scrollorama;
     };
 
-	//
-	//		Easing functions from jQuery UI
-	//
+	// Easing functions from jQuery UI
 	$.extend($.easing, {
 		def: 'easeOutQuad',
 		swing: function (x, t, b, c, d) {
@@ -531,3 +552,40 @@
 	});
      
 })(jQuery);
+
+/*!
+ * Modified from: jQuery Migrate - v1.1.0 - 2013-01-31
+ * https://github.com/jquery/jquery-migrate
+ * Copyright 2005, 2013 jQuery Foundation, Inc. and other contributors; Licensed MIT
+ */
+function getBrowser() {
+	var matched = uaMatch( navigator.userAgent );
+	var browser = {};
+	if ( matched.browser ) {
+		browser[ matched.browser ] = true;
+		browser.version = matched.version;
+	}
+	// Chrome is Webkit, but Webkit is also Safari.
+	if ( browser.chrome ) {
+		browser.webkit = true;
+	} else if ( browser.webkit ) {
+		browser.safari = true;
+	}
+	return browser;
+}
+
+function uaMatch(ua) {
+	ua = ua.toLowerCase();
+
+	var match = /(chrome)[ \/]([\w.]+)/.exec( ua ) ||
+		/(webkit)[ \/]([\w.]+)/.exec( ua ) ||
+		/(opera)(?:.*version|)[ \/]([\w.]+)/.exec( ua ) ||
+		/(msie) ([\w.]+)/.exec( ua ) ||
+		ua.indexOf("compatible") < 0 && /(mozilla)(?:.*? rv:([\w.]+)|)/.exec( ua ) ||
+		[];
+
+	return {
+		browser: match[ 1 ] || "",
+		version: match[ 2 ] || "0"
+	};
+}

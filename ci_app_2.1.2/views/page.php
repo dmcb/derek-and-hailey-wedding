@@ -96,10 +96,12 @@
 
   	<!-- scripts -->
   	<script type="text/javascript" src="<?php echo base_url();?>library/json2.js"></script>
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script type="text/javascript" src="<?php echo base_url();?>library/jquery.timers-1.1.2.js"></script>
     <script type="text/javascript" src="<?php echo base_url();?>library/jquery.scrollorama.js"></script>
-    <script type="text/javascript" src="<?php echo base_url();?>assets/scripts/script.js"></script>
     <script type="text/javascript" src="//api.filepicker.io/v1/filepicker.js"></script>
+	<script type="text/javascript" src="<?php echo base_url();?>library/fancyBox-2.1.4/jquery.fancybox.js?v=2.1.4"></script>
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>library/fancyBox-2.1.4/jquery.fancybox.css?v=2.1.4" media="screen" />
+	<script type="text/javascript" src="<?php echo base_url();?>assets/scripts/script.js"></script>
   </body>
 </html>
