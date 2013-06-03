@@ -39,7 +39,6 @@
   	<div class="background"></div>
 
   	<div class="title">
-  		<hr/>
   		<div class="wrapper">
 			<a href="<?php echo base_url();?>"><img src="<?php echo base_url();?>assets/images/derek_and_hailey.png" alt="Derek &amp; Hailey"/></a>
 
