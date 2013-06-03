@@ -14,7 +14,7 @@
   	<div class="page">
   		<div class="wrapper">
   			<div class="section" id="our_family">
-				<h3><img src="<?php echo base_url();?>assets/images/our_family.png" alt="Our Family" /></h3>
+				<h3>Our Family</h3>
 
 				<div class="triple left">
 					<img src="<?php echo base_url();?>assets/images/pintos_2.jpg" style="width: 304px; height: 228px; top: 247px; left: 40px;" alt="" class="scale" id="pintos2" />
@@ -42,7 +42,7 @@
 			</div>
 			<div class="divider"><span class="highlight">&bull;</span></div>
 			<div class="section" id="the_girls_and_the_boys">
-				<h3><img src="<?php echo base_url();?>assets/images/the_girls_and_the_boys.png" alt="The Girls &amp; The Boys" /></h3>
+				<h3>The Girls &amp; The Boys</h3>
 				<div class="wedding_party">
 					<h4 id="the_girls">The Girls</h4>
 

@@ -14,7 +14,7 @@
   	<div class="page">
   		<div class="wrapper">
   			<div class="section" id="itinerary">
-				<h3><img src="<?php echo base_url();?>assets/images/itinerary.png" alt="Itinerary" /></h3>
+				<h3>Itinerary</h3>
 				<a href="<?php echo base_url();?>assets/images/map_large.png"><img src="<?php echo base_url();?>assets/images/map.png" alt="Map" id="map" /></a>
 				<h4>Sunday, February 17th, 2013</h4>
 				<p><span class="time">3:00 PM</span> - The Art Gallery of Calgary<br/>
@@ -30,7 +30,7 @@
 <?php echo $rsvp; ?>
 			<div class="divider">&bull;<span class="highlight">&bull;</span>&bull;&bull;</div>
 			<div class="section" id="where_to_stay">
-				<h3><img src="<?php echo base_url();?>assets/images/where_to_stay.png" alt="Where To Stay" /></h3>
+				<h3>Where To Stay</h3>
 				<p>
 					We've blocked off a set of rooms from Friday night through Monday morning at the hotels below based on proximity to our various locations. When booking either online or by phone, please reference the Pinto/McBurney wedding for the rates listed below.
 				</p>
@@ -58,7 +58,7 @@
 			</div>
 			<div class="divider">&bull;&bull;<span class="highlight">&bull;</span>&bull;</div>
 			<div class="section" id="about_calgary">
-				<h3><img src="<?php echo base_url();?>assets/images/about_calgary.png" alt="About Calgary" /></h3>
+				<h3>About Calgary</h3>
 				<p>We live in <a href="http://en.wikipedia.org/wiki/Calgary">Calgary, Alberta</a> and we couldn't think of a better place to bring our family and friends for our wedding than our home. Some of you will already know what Calgary is like in February but for those of you that don't, we will break the news: it's cold. But the Canadian winter, as chilly as it may be, is beautiful, so please remember: there is no bad weather, only bad clothes!</p>
 				<p>We've recommended our favourite things to eat, see and do in and around Calgary in February. Have a wonderful time!</p>
 
@@ -103,7 +103,7 @@
 			</div>
 			<div class="divider">&bull;&bull;&bull;<span class="highlight">&bull;</span></div>
 			<div class="section" id="registry">
-				<h3><img src="<?php echo base_url();?>assets/images/registry.png" alt="Registry" /></h3>
+				<h3>Registry</h3>
 				<p>We are grateful to have so many wonderful people in our lives. Having you with us as we start this new chapter together is the best present we could ask for. For those that can not attend, we welcome your blessings from afar.</p>
 				<p>For anyone who would like to help us get started, we have everything we could need for our cozy condo and no room to spare. So, we ask you to consider helping make some of our wishes come true:</p>
 				<div class="choices">

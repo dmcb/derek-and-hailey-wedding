@@ -1,5 +1,5 @@
   			<div class="section" id="rsvp">
-  				<h3><img src="<?php echo base_url();?>assets/images/rsvp.png" alt="RSVP" /></h3>
+  				<h3>r.s.v.p.</h3>
 				<h4 class="one"><?php
 				for ($i=0; $i<sizeof($invitation['names_of_invited']); $i++)
 				{

@@ -7,6 +7,7 @@ $white: #FFF;
 $grey: #888;
 $black: #000;
 
+$font-extra-large: 2.8em;
 $font-large: 1.9em;
 $font-big: 1.4em;
 $font-normal: 15px;
@@ -249,8 +250,8 @@ div.navigation {
 		h2 {
 			margin-top: 58px;
 			color: $chocolate;
-			font-size: $font-large;
-			font-weight: 500;
+			font-size: $font-big;
+			font-weight: 200;
 		}
 
 		span {
@@ -284,9 +285,11 @@ div.page {
 
 	h3 {
 		font-family: "adage-script";
-		font-size: 2em;
-		font-weight: 400;
+		font-size: $font-extra-large;
+		font-weight: 200;
 		font-style: normal;
+		margin: 0.5em auto;
+		text-transform: lowercase;
 	
 		img {
 			border: none;
@@ -606,7 +609,12 @@ div.page {
 
 div.section#wedding_photos {
 	h3 {
-		margin: 0 auto;
+		font-family: "adage-script";
+		font-size: $font-extra-large;
+		font-weight: 200;
+		font-style: normal;
+		margin: 0.5em auto;
+		text-transform: lowercase;
 		padding: 0 16px;
 		width: 944px;
 		position: relative;

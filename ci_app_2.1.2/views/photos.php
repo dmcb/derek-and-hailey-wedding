@@ -12,7 +12,7 @@
   	<div class="page">
   		<div class="wrapper">
   			<div class="section" id="share_photos">
-	  			<h3><img src="<?php echo base_url();?>assets/images/photos.png" alt="Photos" /></h3>
+	  			<h3>Share Your Photos</h3>
 	  			
 	  			<button class="button" id="filepicker" onclick="openFilePicker()" style="margin-left: 192px; margin-bottom: 64px">Share your photos</button>
   			</div>
@@ -20,7 +20,7 @@
   	</div>
   	
 	<div class="section" id="wedding_photos">
-		<h3><img src="<?php echo base_url();?>assets/images/wedding.png" alt="The Wedding" /></h3>
+		<h3>The Wedding</h3>
 		
 		<div>
 			<?php foreach ($photos as $photo) 
@@ -34,7 +34,7 @@
   	<div class="page">
   		<div class="wrapper">
   			<div class="section" id="us_photos">
-	  			<h3><img src="<?php echo base_url();?>assets/images/us.png" alt="Us" /></h3>
+	  			<h3>Us</h3>
 	  			
 	  			<div>
 		  			<img src="<?php echo base_url();?>assets/images/engagement_1.jpg" alt="" style="width: 234px; height: 465px; left: 118px;" class="scale" id="engagement_1"/>
