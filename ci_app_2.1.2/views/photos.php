@@ -13,7 +13,7 @@
   		<div class="wrapper">
   			<div class="section" id="share_photos">
 	  			<h3>Share Your Photos</h3>
-	  			
+	  			<p>If you were able to be with us for our wedding, we would love for you to send us your photos and help tell our story. Please take a few moments and click the upload button to share pictures from your computer, Facebook, Instagram or other services.</p>
 	  			<button class="button" id="filepicker" onclick="openFilePicker()" style="margin-left: 192px; margin-bottom: 64px">Share your photos</button>
   			</div>
   		</div>
