@@ -5,12 +5,3 @@ Thumbs.db
 
 # Ignore system-specific .htaccess
 .htaccess
-
-# Ignore Code Igniter configurations with passwords, cache and logs
-ci_app_*/cache
-ci_app_*/config/config.php
-ci_app_*/config/database.php
-ci_app_*/logs
-
-# Ignore CSV files
-csv/*
