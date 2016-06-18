@@ -147,7 +147,23 @@ $(document).ready(function(){
 	// Entering the site from the 'Thank You' splash
 	$('#close').click(function() {
 		$('#post_wedding_splash').removeClass('visible');
+		if (typeof(Storage) !== "undefined") {
+			sessionStorage.setItem('splashed', true);
+		}
 	});
+
+	// Check if splash has been clicked already
+	if (typeof(Storage) !== "undefined") {
+		if (sessionStorage.getItem('splashed')) {
+			$('#post_wedding_splash').removeClass('visible');
+		}
+		else {
+			$('#post_wedding_splash').addClass('visible');
+		}
+	} 
+	else {
+		$('#post_wedding_splash').addClass('visible');
+	}
 });
 
 function openFilePicker() {
